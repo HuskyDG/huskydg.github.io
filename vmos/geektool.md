@@ -1,4 +1,4 @@
-# About
+# GeekTool
 
 <img src="https://i.imgur.com/aGDKH2R.png" width="120px"/> 
 
