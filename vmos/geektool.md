@@ -58,11 +58,10 @@ Wipe all your data with only few seconds.
 
 ### **VMOS Props Config**
 
-Patch read-only system properties set by VMOS Pro by forcing init load `/tool_files/system.prop` before `/vmos.prop` and `/system/build.prop`.
+Patch read-only system properties (start with `ro.`)  set by VMOS Pro, these props can only set once and cannot be changed with `setprop` even with root user.
 
 If you get bootloop after changing any prop through `/tool_files/system.prop`, you can disable it, read FAQ bellow!
 
-Read-only properties is props start with `ro.`, these props can only set once and cannot be changed with `setprop` even with root user.
 
 ### **Install modifications** 
 
