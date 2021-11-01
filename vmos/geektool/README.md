@@ -52,9 +52,13 @@ Need root access to install but using it no need root access
 
 Busybox with various program for many apps and manu program!
 
+Busybox allows you or programs to perform actions on your phone using Linux (copied from Unix) commands. Android is basically a specialized Linux OS with a Java compatible (Dalvik) machine for running programs. The Android kernel is a modified version of the Linux kernel (that is why the Android kernel must always be open source). Busybox gives functionality to your phone that it does not have without it. Many programs, especially root programs such as Titanium Backup, require busybox to perform the functions of the program. Without busybox installed your phone is much more limited in what it can do.
+
 ### **Advanced wipe**
 
 Wipe all your data with only few seconds.
+
+When using Wipe data / factory reset, all applications and data are deleted (cache, accounts, applications, music, files, videos, etc.). It is usually used if there are any errors when using the device, or the smartphone or tablet starts to slow down, or the user wants to return the device to its original state and reset the settings. Use this item carefully. If you decide to reset the data, do not forget to backup the necessary files first.
 
 ### **VMOS Props Config**
 
@@ -81,7 +85,11 @@ Can execute your shell script every boot time.
 
 ### **SD Card Tool**
 
-Using microSD to expand your virtual machine memory
+Using microSD to expand your virtual machine memory.
+
+Most Android phones have an SD card slot — or, more likely, a microSD card slot— which allows you to significantly expand the storage space in your phone. Most of the time you'll probably get a lot of value out of this expansion slot by storing data files like music and documents.
+
+But you can also free up your phone's internal storage space by moving apps to the SD card as well. It's simple to do and takes just a few taps. 
 
 The folder to place files on your devices will be:
 
