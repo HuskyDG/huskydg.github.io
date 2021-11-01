@@ -18,14 +18,12 @@ Or leave issue report in this repo.
 <p>Smaller ROM, Fake Google phone build fingerprint</p>
 <p><b>Based on VMOS v1.3.1 ROM</b>
 <br/>Various bugs were fixed. Smoother and faster.</p>
-<p><b>Terminal Tool</b>
+<p><b>Geek Tool</b>
 
 <a href="https://github.com/HuskyDG/VMOSPro_RootXposed_Terminal"><img src="https://i.imgur.com/XZQ1cav.png" width="80%"/>
 </a>
 
 <br/>Root, Xposed and Google Services is not installed by default to ensure the faster ROM installation. You can run <code>tool</code> command to install it manually.</p>
-
-[How to enable ROOT by Terminal Tool](https://youtu.be/OnlLPFnbrn4)
 
 <p><b>Full SystemUI</b>
 <br>
