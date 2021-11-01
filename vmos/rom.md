@@ -1,6 +1,6 @@
 <div><img src="https://vmos.wap.sh/images/VMOSProGEEK.png" style="width:100%"/></div>
 
-## VMOS ROM Detail
+# VMOS Pro • ROM
 
 ROM Type: Fake Rootfs - No Selinux
 
@@ -116,8 +116,6 @@ There are two build types: Gapps (with Google Services) and vanilla (no Google S
 [Android 5.1.1 32-bit LITE (gapps)](http://link1s.com/K69GK5v)
 
 [Android 5.1.1 32-bit LITE (vanilla)](http://link1s.com/hgLVsPZ)
-
-
 
 
 # Installation guide
