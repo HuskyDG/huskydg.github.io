@@ -19,7 +19,7 @@ Goal: This app makes installing vmostool easier!
 
 2. Import apk and install **GeekTool** into virtual machine of VMOS Pro.
 
-
+[Click here to know how to use GeekTool](https://youtu.be/wDYiu8kN1oE) 
 
 
 ## What can GeekTool script do?
