@@ -35,7 +35,7 @@ Or leave issue report in this repo.
 
 ## Download
 
-I need money to go to university 😭. Help me by passing **link1s.com**
+I need money to go to university. Please Help me by passing **link1s.com**
 
 The link also include md5 code text!
 
