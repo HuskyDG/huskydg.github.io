@@ -14,6 +14,8 @@ Goal: This app makes installing vmostool easier!
 
 ## Installation
 
+> It is recommended to use VMOS Pro version from 1.3.2 to the lastest, the version lower 1.3.2 has a bug that randomly losing root.
+
 
 1. Download from [MEGA Link](http://link1s.com/W2GN7) 
 
