@@ -37,17 +37,15 @@ I need money to go to university. Please Help me by passing **link1s.com**
 The link also include md5 code text!
 
 
-[Android 7.1.2 marlin arm64-v8a 64-bit](http://link1s.com/vmosromv7_64)
+1. [Android 7.1.2 marlin arm64-v8a 64-bit](http://link1s.com/vmosromv7_64)
+   Support ABI: 64bit (arm64-v8a), 32bit(armeabi-v7a/armeabi)
 
 
 
-
-[Android 7.1.2 marlin armeabi-v7a 32-bit](http://link1s.com/vmosromv7)
-
-
+2. [Android 7.1.2 marlin armeabi-v7a 32-bit](http://link1s.com/vmosromv7)
+   Support ABI: 32bit(armeabi-v7a/armeabi)
 
 
-[Android 5.1.1 manta armeabi-v7a 32-bit](http://link1s.com/vmosromv5)
-
-
+3. [Android 5.1.1 manta armeabi-v7a 32-bit](http://link1s.com/vmosromv5)
+   Support ABI: 32bit(armeabi-v7a/armeabi)
 
