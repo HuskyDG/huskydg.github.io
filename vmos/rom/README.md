@@ -18,7 +18,7 @@ Or leave issue report in this repo.
 <p>Smaller ROM, Fake Google phone build fingerprint</p>
 <p><b>Based on VMOS v1.3.1 ROM</b>
 <br/>Various bugs were fixed. Smoother and faster.</p>
-<p><b>[GeekTool pre-installed](./geektool) </b>
+<p><b><a href="./geektool">GeekTool pre-installed</a> </b>
 
 <br/>Root, Xposed and Google Services is not installed by default to ensure the first boot you don't get any issues.
 <br/>
