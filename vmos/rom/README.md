@@ -22,7 +22,7 @@ Or leave issue report in this repo.
 
 <br/>Root, Xposed and Google Services is not installed by default to ensure the first boot you don't get any issues.
 <br/>
-To enable ROOT, Xposed Framework or Google Services, you can use [GeekTool](../geektool) pre-installed in ROM!</p>
+To enable ROOT, Xposed Framework or Google Services, you can use <a href="../geektool">GeekTool</a> pre-installed in ROM!</p>
 
 <p><b>Full SystemUI</b>
 <br>
