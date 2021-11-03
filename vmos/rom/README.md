@@ -26,7 +26,7 @@ To enable ROOT, Xposed Framework or Google Services, you can use [GeekTool](../g
 
 <p><b>Full SystemUI</b>
 <br>
-<img src="https://i.imgur.com/ShZyRmg.png" width="80%"/>
+<img src="https://i.imgur.com/ShZyRmg.png" width="60%"/>
 </p>
 
 
