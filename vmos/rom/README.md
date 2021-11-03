@@ -38,7 +38,7 @@ The link also include md5 code text!
 
 
 1. [Android 7.1.2 marlin arm64-v8a 64-bit](http://link1s.com/vmosromv7_64)
-   Support ABI: 64bit (arm64-v8a), 32bit(armeabi-v7a/armeabi)
+    Support ABI: 64bit (arm64-v8a), 32bit(armeabi-v7a/armeabi)
 
 
 
