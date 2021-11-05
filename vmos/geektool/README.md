@@ -45,7 +45,9 @@ How `su` work is letting apps run a new process in root shell launched by `daemo
 
 ### **Shizuku**
 
-A new way to get special access of system (root,adb)
+Launch `shizuku_server` in virtual machine automatically every boot without rooting or connecting to wifi adb.
+
+This is a new way to get special access of system (root,adb) without rooting
 
 ### **Xposed Framework**
 
@@ -55,19 +57,21 @@ Need root access to install but using it no need root access
 
 ### **Busybox**
 
-Busybox with various program for many apps and manu program!
+Install compatible Busybox for VMOS PRO virtual machine
 
-Busybox allows you or programs to perform actions on your phone using Linux (copied from Unix) commands. Android is basically a specialized Linux OS with a Java compatible (Dalvik) machine for running programs. The Android kernel is a modified version of the Linux kernel (that is why the Android kernel must always be open source). Busybox gives functionality to your phone that it does not have without it. Many programs, especially root programs such as Titanium Backup, require busybox to perform the functions of the program. Without busybox installed your phone is much more limited in what it can do.
+> Busybox allows you or programs to perform actions on your phone using Linux (copied from Unix) commands. Android is basically a specialized Linux OS with a Java compatible (Dalvik) machine for running programs. The Android kernel is a modified version of the Linux kernel (that is why the Android kernel must always be open source). Busybox gives functionality to your phone that it does not have without it. Many programs, especially root programs such as Titanium Backup, require busybox to perform the functions of the program. Without busybox installed your phone is much more limited in what it can do.
 
 ### **Advanced wipe**
 
 Wipe all your data with only few seconds.
 
-When using Wipe data / factory reset, all applications and data are deleted (cache, accounts, applications, music, files, videos, etc.). It is usually used if there are any errors when using the device, or the smartphone or tablet starts to slow down, or the user wants to return the device to its original state and reset the settings. Use this item carefully. If you decide to reset the data, do not forget to backup the necessary files first.
+When using Wipe data / factory reset, all applications and data are deleted (cache, accounts, applications, music, files, videos, etc.). It is usually used if there are any errors when using the virtual machine starts to slow down, or the user wants to return the virtual machine to its original state and reset the settings. Use this item carefully. If you decide to reset the data, do not forget to backup the necessary files first.
 
 ### **VMOS Props Config**
 
 Patch read-only system properties (start with `ro.`)  set by VMOS Pro, these props can only set once and cannot be changed with `setprop` even with root user.
+
+From v1.4.6, change properties in `/system/build.prop` will no longer be affected and change the file `/vmos.prop` or `/system.prop` will not be applied as VMOS Pro will always reset `/vmos.prop`, change properties with this option is a good way to go!
 
 If you get bootloop after changing any prop through `/tool_files/system.prop`, you can disable it, read FAQ bellow!
 
@@ -82,11 +86,11 @@ Introduce a new way to modify system, modify `/system` at boot instead of modify
 
 ### **Mount real storage**
 
-You files on your real system can be access from virtual machine VMOS Pro through `/local_disk` path. You need to grant **Storage** permission to VMOS Pro app. 
+You files on your real system can be accessable from virtual machine VMOS Pro through `/local_disk` path. You need to grant **Storage** permission to VMOS Pro app. 
 
 ### **Init script support**
 
-Can execute your shell script every boot time.
+Can execute your shell script every boot time. Place your script to `/tool_files/work/script`
 
 ### **SD Card Tool**
 
@@ -96,7 +100,9 @@ Most Android phones have an SD card slot — or, more likely, a microSD card slo
 
 But you can also free up your phone's internal storage space by moving apps to the SD card as well. It's simple to do and takes just a few taps. 
 
-The folder to place files on your devices will be:
+To make this features work, we need to swap a folder from SDCard with a folder in virtual machine.
+
+The path to folder should be writeable without granting special access to VMOS PRO, in this case GeekTool will choice:
 
 ***microSD card*** > **Android** > **data** > **data** > **com.vmos.pro** > **files** > **expand**
 
@@ -105,8 +111,7 @@ And it will be used as `/sdcard` and `/mnt/asec` in VMOS Pro
 
 ### **Dual space**
 
-Open new userspace so you can have two space on one virtual machine
-
+This option allows you to create a new userspace area on a virtual machine.  The secondary user space is almost independent of the primary space, the dependencies are just system files.  So you don't need to create new virtual machines and save precious memory!
 
 ### **Google Services** 
 
