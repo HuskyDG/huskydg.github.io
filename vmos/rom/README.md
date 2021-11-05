@@ -16,7 +16,8 @@ Or leave issue report in this repo.
 
 ## What is new
 <p>Smaller ROM, Fake Google phone build fingerprint</p>
-<p><b>Based on VMOS v1.3.1 ROM</b>
+<p><b>Based on lastest VMOS PRO ROM</b>
+<br/>Fixed Contacts Storage problem on Android 7.1.2 64bit ROM
 <br/>Various bugs were fixed. Smoother and faster.</p>
 <p><b><a href="../geektool">GeekTool pre-installed</a> </b>
 
@@ -32,7 +33,7 @@ To enable ROOT, Xposed Framework or Google Services, you can use <a href="../gee
 
 ## Download
 
-I need money to go to university. Please Help me by passing **link1s.com**
+Please Help me by passing **link1s.com**
 
 The link also include md5 code text!
 
