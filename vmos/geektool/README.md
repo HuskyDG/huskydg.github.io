@@ -77,7 +77,7 @@ When using Wipe data / factory reset, all applications and data are deleted (cac
 
 Patch read-only system properties (start with `ro.`)  set by VMOS Pro, these props can only set once and cannot be changed with `setprop` even with root user.
 
-From v1.4.6, change properties in `/system/build.prop` will no longer be affected and change the file `/vmos.prop` or `/system.prop` will not be applied as VMOS Pro will always reset `/vmos.prop`, change properties with this option is a good way to go!
+From VMOS PRO v1.4.6, change properties in `/system/build.prop` may no longer be affected and change the file `/vmos.prop` or `/system.prop` will not be applied as VMOS Pro will always reset `/vmos.prop`, change properties with this option is a good way to go!
 
 If you get bootloop after changing any prop through `/tool_files/system.prop`, you can disable it, read FAQ bellow!
 
