@@ -47,6 +47,15 @@ GeekTool also can bypass **Superuser** crash problem by hiding the `com.koushikd
 
 How `su` work is letting apps run a new process in root shell launched by `daemonsu`, `su` cannot work if there are no daemon process.
 
+### SUHide
+
+SUHide app is modified version of RootCloak with my custom code that it will prevent apps from detecting su binary.
+
+`su` binary will be moved to `/dev/$random_str` and remove `/dev/$random_str` folder from `PATH` variable of chosen apps
+
+These thing can also be hidden: Busybox installed to `/dev/$random_str` and Xposed Framework (not sure, except Xposed Installer app)
+
+
 ### **Shizuku**
 
 Launch `shizuku_server` in virtual machine automatically every boot without rooting or connecting to wifi adb.
