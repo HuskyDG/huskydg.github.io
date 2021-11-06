@@ -49,11 +49,13 @@ How `su` work is letting apps run a new process in root shell launched by `daemo
 
 ### SUHide
 
-SUHide app is modified version of RootCloak with my custom code that it will prevent apps from detecting su binary.
+> This is not a good hide-root solution but at least we have
 
-`su` binary will be moved to `/dev/$random_str` and remove `/dev/$random_str` folder from `PATH` variable of chosen apps
+SUHide app is modified version of RootCloak with my custom code that it will prevent apps from detecting su binary
 
-These thing can also be hidden: Busybox installed to `/dev/$random_str` and Xposed Framework (not sure, except Xposed Installer app)
+`su` binary will be moved to `/system_root/dev/$random_str` and remove `/dev/$random_str` folder from `PATH` variable of chosen apps
+
+These thing can also be hidden: Busybox installed to `/system_roor/dev/$random_str` and Xposed Framework (not sure, except Xposed Installer app)
 
 
 ### **Shizuku**
