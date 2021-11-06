@@ -90,7 +90,7 @@ Patch read-only system properties (start with `ro.`)  set by VMOS Pro, these pro
 
 From VMOS PRO v1.4.6, change properties in `/system/build.prop` may no longer be affected and change the file `/vmos.prop` or `/system.prop` will not be applied as VMOS Pro will always reset `/vmos.prop`, change properties with this option is a good way to go!
 
-If you get bootloop after changing any prop through `/tool_files/system.prop`, you can disable it, read FAQ bellow!
+Also any changes through `/tool_files/system.prop` can be disabled when you got any problem, read FAQ bellow!
 
 
 ### **Install modifications** 
