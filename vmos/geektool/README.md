@@ -24,13 +24,16 @@ Support VMOS Pro v1.3.2 ~ 1.4.6
 
 [Click here to know how to use GeekTool](https://youtu.be/wDYiu8kN1oE) 
 
+## Changelogs
+
+[Read releases note here!](https://github.com/HuskyDG/VMOSPro_GEEKTools/releases)
 
 ## What can GeekTool script do?
 ### Custom ROM Fix
 
-• If an user install backup ROM with **Import local ROM** option, VMOS Pro doesn't restore any symlinks and applets point to `toybox`, `toolbox`,... It will also break the structure of system and some apps cannot work properly (Root checker said *Root is not properly installed* even grant it root access), in that case, **GeekTool will solve broken structure** in pre-init stage before the init stage start and system booting process
-
-• No matter user install custom ROM via **Import local ROM** or **Rec the VM** option, **GeekTool** will make sure that your ROM doesn't miss any applets of `toybox` or `toolbox`
+• If an user install backup ROM with **Import local ROM** option, VMOS Pro doesn't restore any symlinks and applets point to `toybox`, `toolbox`,... It will also break the structure of system and some apps cannot work properly (Root checker said *Root is not properly installed* even grant it root access), this can be solved by restoring all symlinks point to toolbox and toybox if detected some symlinks is missing and this will be done by GeekTool
+ 
+• No matter user install custom ROM via **Import local ROM** or **Rec the VM** option, **GeekTool** will make sure that your ROM doesn't miss any applets of toybox and toolbox
 
 Note: Install **GeekTool** before you backup the virtual machine.
 
@@ -56,6 +59,8 @@ SUHide app is modified version of RootCloak with my custom code that it will pre
 `su` binary will be moved to `/system_root/dev/$random_str` and remove `/system_root/dev/$random_str` folder from `PATH` variable of chosen apps
 
 These thing can also be hidden: Busybox installed to `/system_roor/dev/$random_str` and Xposed Framework (not sure, except Xposed Installer app)
+
+VMOS PRO has many restriction, so there are no way to completely hide root access as **MagiskHide** do
 
 
 ### **Shizuku**
