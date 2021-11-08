@@ -54,9 +54,9 @@ How `su` work is letting apps run a new process in root shell launched by `daemo
 
 > This is not a good hide-root solution but at least we have
 
-SUHide app is modified version of RootCloak with extra custom commandthat it will prevent apps from detecting su binary
+SUHide app is modified version of RootCloak with extra custom command that it will prevent apps from detecting su binary
 
-To hide root, we need to hide `su` command. If we delete `su` command means we remove root access from apps. The goal to hide root is that `su` must become invisible for blanklist apps while keep other apps getting root access.
+To hide root, we need to hide `su` command. If we delete `su` command means we remove root access from apps. The purpose of hiding root is that `su` must become invisible for blacklist apps while keep it visible for other apps to continue getting root access.
 
 `su` binary need to move to somewhere else except `/system/bin`, `/system/bin` and `/sbin` because almost app will scan `su` in those folder. The chosen folder to place `su` is `/system_root/dev/$random_str` and add it to `PATH`
 
