@@ -2,10 +2,6 @@
 
 # VMOS Pro • ROM
 
-Fake ROOTFS, No SeLinux
-
-> Compare with Android system on our phone, VMOS doesn't actually have rootfs, that means it directly places virtual files into private data directory of VMOS app and uses it as new rootfs for virtual machine. There are no image files and Selinux inside VMOS, that's why installing Magisk is impossible!
-
 ## Error and problem
 
 Contact me 👉 http://www.facebook.com/vmospro.modder
@@ -51,4 +47,14 @@ The link also include md5 code text!
 
 3. [Android 5.1.1 manta armeabi-v7a 32-bit](http://link1s.com/vmosromv5)
    Support ABI: 32bit(armeabi-v7a/armeabi)
+
+
+# FAQ
+
+## Can we install Magisk into VMOS ROM?
+
+Short answer, because vmos is fake ROOTFS, No SeLinux system
+
+Long answer, Compare with Android system on our phone, VMOS doesn't actually have rootfs, that means it directly places virtual files into private data directory of VMOS app and uses it as new rootfs for virtual machine. There are no image files and Selinux inside VMOS, that's why installing Magisk is impossible!
+
 
