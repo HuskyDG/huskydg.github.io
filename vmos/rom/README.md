@@ -4,7 +4,7 @@
 
 Fake ROOTFS, No SeLinux
 
-> Compare with our Android system phone, VMOS doesn't actually have rootfs, that means it directly places virtual files into private data directory of VMOS app and uses it as new rootfs for virtual machine. There are no image files and Selinux in VMOS!
+> Compare with Android system on our phone, VMOS doesn't actually have rootfs, that means it directly places virtual files into private data directory of VMOS app and uses it as new rootfs for virtual machine. There are no image files and Selinux inside VMOS, that's why installing Magisk is impossible!
 
 ## Error and problem
 
