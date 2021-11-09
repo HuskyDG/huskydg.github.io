@@ -2,7 +2,9 @@
 
 # VMOS Pro • ROM
 
-ROM Type: Fake Rootfs - No Selinux
+Fake ROOTFS, No SeLinux
+
+> Compare with our Android system phone, VMOS doesn't actually have rootfs, that means it directly places virtual files into private data directory of VMOS app and uses it as new rootfs for virtual machine. There are no image files and Selinux in VMOS!
 
 ## Error and problem
 
