@@ -49,6 +49,8 @@ The link also include md5 code text!
    Include ABI: 32bit(armeabi-v7a/armeabi)
 
 
+4. [Need more ROM?](http://vmos.wap.sh/rom.html)
+
 # FAQ
 
 ## Can we install Magisk into VMOS ROM?
