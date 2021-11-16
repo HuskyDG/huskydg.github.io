@@ -37,24 +37,25 @@ The link also include md5 code text!
 
 
 1. [Android 7.1.2 marlin arm64-v8a 64-bit](http://link1s.com/vmosromv7_64)
-    Support ABI: 64bit (arm64-v8a), 32bit(armeabi-v7a/armeabi)
+    Include ABI: 64bit (arm64-v8a), 32bit(armeabi-v7a/armeabi)
 
 
 
 2. [Android 7.1.2 marlin armeabi-v7a 32-bit](http://link1s.com/vmosromv7)
-   Support ABI: 32bit(armeabi-v7a/armeabi)
+   Include ABI: 32bit(armeabi-v7a/armeabi)
 
 
 3. [Android 5.1.1 manta armeabi-v7a 32-bit](http://link1s.com/vmosromv5)
-   Support ABI: 32bit(armeabi-v7a/armeabi)
+   Include ABI: 32bit(armeabi-v7a/armeabi)
 
 
 # FAQ
 
 ## Can we install Magisk into VMOS ROM?
 
-Short answer, because vmos is fake ROOTFS, No SeLinux system
+Short answer, no.
 
-Long answer, Compare with Android system on our phone, VMOS doesn't actually have rootfs, that means it directly places virtual files into private data directory of VMOS app and uses it as new rootfs for virtual machine. There are no image files and Selinux inside VMOS, that's why installing Magisk is impossible!
+Long answer, because vmos is fake ROOTFS, No SeLinux system.
+Compare with Android system on our phone, VMOS doesn't actually have rootfs, that means it directly places virtual files into private data directory of VMOS app and uses it as new rootfs for virtual machine. There are no image files and Selinux inside VMOS, that's why installing Magisk is impossible!
 
 
