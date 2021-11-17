@@ -5,7 +5,7 @@
 
 Modded by GuanYinLITE
 
-You can [subscribe](https://youtu.be/UfIpgS1tBiY) to him to get lastest version
+You can [subscribe](https://youtube.com/c/GuanYinLITE) to him to get lastest version
 
 
 <ul><li>Enable Root/Xposed</li><li>Unlimited virtual machine are created</li><li>Unlimited virtual machine run in background</li><li>Change boot animation</li><li>No advertisement</li></ul>
