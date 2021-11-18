@@ -48,8 +48,11 @@ The link also include md5 code text!
 3. [Android 5.1.1 manta armeabi-v7a 32-bit](http://link1s.com/vmosromv5)
    Include ABI: 32bit(armeabi-v7a/armeabi)
 
+## Need more ROM?
 
-4. [Need more ROM?](http://vmos.wap.sh/rom.html)
+4. [HuskyDG's Free ROM Market](http://vmos.wap.sh/rom.html)
+
+5. [LokNPlay's ROM Channel](https://t.me/vmosroms) 
 
 # FAQ
 
