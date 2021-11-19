@@ -36,23 +36,23 @@ Please Help me by passing **link1s.com**
 The link also include md5 code text!
 
 
-1. [Android 7.1.2 marlin arm64-v8a 64-bit](http://link1s.com/vmosromv7_64)
+1. [Android 7.1.2 64-bit](http://link1s.com/vmosromv7_64)
     Include ABI: 64bit (arm64-v8a), 32bit(armeabi-v7a/armeabi)
 
 
 
-2. [Android 7.1.2 marlin armeabi-v7a 32-bit](http://link1s.com/vmosromv7)
+2. [Android 7.1.2 32-bit](http://link1s.com/vmosromv7)
    Include ABI: 32bit(armeabi-v7a/armeabi)
 
 
-3. [Android 5.1.1 manta armeabi-v7a 32-bit](http://link1s.com/vmosromv5)
+3. [Android 5.1.1 32-bit](http://link1s.com/vmosromv5)
    Include ABI: 32bit(armeabi-v7a/armeabi)
 
 ## Need more ROM?
 
-4. [HuskyDG's Free ROM Market](http://vmos.wap.sh/rom.html)
+4. [Free ROM Market](http://vmos.wap.sh/rom.html)
 
-5. [LokNPlay's ROM Channel](https://t.me/vmosroms) 
+5. [Join ROM Channel](https://t.me/vmosroms) 
 
 # FAQ
 
