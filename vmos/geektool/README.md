@@ -45,19 +45,12 @@ Old but gold, a good solution for ROOT, currently VMOS uses `su` binary from Kou
 
 [koush/Superuser](https://github.com/koush/Superuser): Why another Superuser?
  
-We provide a native way to let any apps can login root user through `su` command.
-The path we usually place `su` file is `/system/xbin`.
-
-However, VMOS Pro doesn't let non-premium users have root access on official ROM, if it detected `su` binary in `/system`, then `su` binary will be deleted every boot and crash the **Superuser** app. GeekTool install `su` in `/sbin` directory instead to ensure `su` will not be removed.
-GeekTool also can bypass **Superuser** crash problem by hiding the `com.koushikdutta.superuser` package of app, so you can continue keep Superuser app for managing ROOT permission.
-
-How `su` work is letting apps run a new process in root shell launched by `daemonsu`, `su` cannot work if there are no daemon process.
 
 ### SUHide
 
 > This is not a good hide-root solution but at least we have
 
-SUHide app is modified version of RootCloak with extra custom command that it will prevent apps from detecting su binary
+Modified version from RootCloak.
 
 To hide root, we need to hide `su` command. If we delete `su` command means we remove root access from apps. The purpose of hiding root is that `su` must become invisible for blacklist apps while keep it visible for other apps to continue getting root access.
 
