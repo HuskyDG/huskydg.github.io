@@ -40,7 +40,9 @@ Note: Installing GeekTool need to modify system, if you virtual machine doesn't 
 
 [Read releases note](https://github.com/HuskyDG/VMOSPro_GEEKTools/releases)
 
-[Report bugs or issues](https://github.com/HuskyDG/VMOSPro_GEEKTools/issues) 
+[Report bugs or issues](https://github.com/HuskyDG/VMOSPro_GEEKTools/issues)
+
+Make sure you read all FAQs bellow before open any issues
 
 
 ## What can GeekTool script do?
@@ -197,7 +199,7 @@ For safety, please only modify `/tool_files/system.prop` instead of `/system/bui
 ## Why don't Root button turn on after enable Root access through GeekTool?
 
 
-Because installation don't modify virtual machine configuration database inside VMOS PRO app. If it modifies database, it will prevent you from booting virtual machine with Root enabled on non-Premium account or guest account.
+Because installation won't modify virtual machine configuration database inside VMOS PRO app. If it modifies database, it will prevent you from booting virtual machine with Root enabled on non-Premium account or guest account.
 
 And modify virtual machine configuration is not needed!
 
