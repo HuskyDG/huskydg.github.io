@@ -193,3 +193,11 @@ DISABLE_XPOSED=false
 
 For safety, please only modify `/tool_files/system.prop` instead of `/system/build.prop`. The properties in `system.prop` will override or merge with `build.prop` every boot.
 
+
+## Why don't Root button turn on after enable Root access through GeekTool?
+
+
+Because installation don't modify virtual machine configuration database inside VMOS PRO app. If it modifies database, it will prevent you from booting virtual machine with Root enabled on non-Premium account or guest account.
+
+And modify virtual machine configuration is not needed!
+
