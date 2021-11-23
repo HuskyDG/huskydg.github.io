@@ -21,6 +21,8 @@ Goal: This app makes installing vmostool easier!
 
 - VMOS Pro lower v1.3.2 is still supported but many bugs
 
+- Your real Android system must be higher than Android 6.0
+
 > It is recommended to use VMOS Pro version from 1.3.2 to the lastest, the version lower 1.3.2 has a bug that randomly losing root.
 
 Note: Installing GeekTool need to modify system, if you virtual machine doesn't boot after installation, just **Disable GeekTool**, read FAQ to know how!
@@ -196,17 +198,21 @@ DISABLE_XPOSED=false
 For safety, please only modify `/tool_files/system.prop` instead of `/system/build.prop`. The properties in `system.prop` will override or merge with `build.prop` every boot.
 
 
-## Why don't Root button turn on after enable Root access through GeekTool?
+### Why don't Root button turn on after enable Root access through GeekTool?
 
 
 Because installation won't modify virtual machine configuration database inside VMOS PRO app. If it modifies database, it will prevent you from booting virtual machine with Root enabled on non-Premium account or guest account.
 
 And modify virtual machine configuration is not needed!
 
-## Does Root access from GeekTool conflict with default root access?
+### Does Root access from GeekTool conflict with default root access?
 
 Geektool install su binary to `/tool_files/binary` while VMOS PRO install su binary to `/system/xbin` which is common path.
 
 You will see two Superuser app if you active both Root access from GeekTool and default VMOS Pro.
 
 Virtual machine only accept one `su` command in `PATH` variable and it will be conflicted.
+
+### Can we install Magisk?
+
+Short answer, no.
