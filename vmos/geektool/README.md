@@ -201,3 +201,10 @@ Because installation don't modify virtual machine configuration database inside 
 
 And modify virtual machine configuration is not needed!
 
+## Does Root access from GeekTool conflict with default root access?
+
+Geektool install su binary to `/tool_files/binary` while VMOS PRO install su binary to `/system/xbin` which is common path.
+
+You will see two Superuser app if you active both Root access from GeekTool and default VMOS Pro.
+
+Virtual machine only accept one `su` command in `PATH` variable and it will be conflicted.
