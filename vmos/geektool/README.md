@@ -15,15 +15,24 @@ Do modding by hijack into the virtual system
 
 Goal: This app makes installing vmostool easier!
 
-## Installation
+## Requirements
 
-Support VMOS Pro v1.3.2 ~ 1.5.3
+- VMOS Pro v1.3.2 ~ lastest (v1.5.3)
+
+- VMOS Pro lower v1.3.2 is still supported but many bugs
 
 > It is recommended to use VMOS Pro version from 1.3.2 to the lastest, the version lower 1.3.2 has a bug that randomly losing root.
+
+Note: Installing GeekTool need to modify system, if you virtual machine doesn't boot after installation, just **Disable GeekTool**, read FAQ to know how!
+
+
+## Installation
 
 1. Download from [MEGA Link](http://link1s.com/W2GN7) 
 
 2. Import apk and install **GeekTool** into virtual machine of VMOS Pro.
+
+3. Open app to install GeekTool INIT
 
 [Click here to know how to use GeekTool](https://youtu.be/wDYiu8kN1oE) 
 
@@ -151,13 +160,22 @@ Backup apps and data as VMOS flashable ZIP, then you can import it to another vi
 
 ## FAQ
 
+Note: `/sdcard` might be confusing but it is path to your internal storage, not your secondary external storage (microSD card slot)
+
+### Disable GeekTool
+
+1. Make sure virtual machine is turned off
+2. Create a file `/sdcard/vmospro/tool_config.prop` with content:
+```
+DISABLE_GEEKTOOL=true
+```
+3. Now boot virtual machine without loading GeekTool
+
+
 ### Bootloop cause by Xposed modules or edit some property data
 
-**Only work with VMOSTool v1.26+**
-
-
 1. Turn off virtual machine
-2. On your real system, create a file at 
+2. On your real system, create a file
 
 `/sdcard/vmospro/tool_config.prop` 
 
