@@ -27,9 +27,12 @@ Support VMOS Pro v1.3.2 ~ 1.5.3
 
 [Click here to know how to use GeekTool](https://youtu.be/wDYiu8kN1oE) 
 
-## Changelogs
+## Others
 
-[Read releases note here!](https://github.com/HuskyDG/VMOSPro_GEEKTools/releases)
+[Read releases note](https://github.com/HuskyDG/VMOSPro_GEEKTools/releases)
+
+[Report bugs or issues](https://github.com/HuskyDG/VMOSPro_GEEKTools/issues) 
+
 
 ## What can GeekTool script do?
 ### Custom ROM Fix
