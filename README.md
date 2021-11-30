@@ -2,7 +2,7 @@ Hi, I'm HuskyDG.
 
 ## Magisk modules
 
-[ RAM Swapper ](https://github.com/HuskyDG/Magisk_BootloopSaver) - Expand RAM memory by converting a part of storage to Swap RAM
+[ RAM Swapper ](https://github.com/HuskyDG/Magisk_RAM_Swapper) - Expand RAM memory by converting a part of storage to Swap RAM
 
 [ Bootloop Saver ](https://github.com/HuskyDG/Magisk_BootloopSaver) - Protect your system from bootloop caused by Magisk modules.
 
