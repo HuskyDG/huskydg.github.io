@@ -10,7 +10,7 @@ Hi, I'm HuskyDG.
 
 ## Other stuffs
 
-[ Minecraft PE Downloader ] - An app is used for downloading or upgrading your Minecraft PE for free
+[ Minecraft PE Downloader ](./mcdownload) - An app is used for downloading or upgrading your Minecraft PE for free
 
 [ VMOS Pro ](./vmos) - VMOS is an APP software based on Virtual Machine. VMOS can be installed in the form of a normal APP to Linux or Android system through VM technology.
 
