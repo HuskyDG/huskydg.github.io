@@ -12,6 +12,8 @@ Hi, I'm HuskyDG.
 
 [ **Minecraft PE Downloader** ](./mcdownload) - An app is used for downloading or upgrading your Minecraft PE for free
 
+[ **Magisk on WSA** ](./magiskonwsa) - Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem for Android)
+
 [ **No-root Busybox** ](http://github.com/huskydg/busybox-no-root) - The shell script which allows you to install Busybox into your device, open Busybox usage for Terminal Emulator or Material Emulator.
 
 [ **Magisk • VphoneGaga** ](./vphonegaga/magisk) - Set up a proper minial Magisk on VphoneGaga virtual machine without patching boot image
