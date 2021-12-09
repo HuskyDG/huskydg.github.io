@@ -46,6 +46,11 @@ Note: Installing GeekTool need to modify system, if you virtual machine doesn't 
 
 Make sure you read all FAQs bellow before open any issues
 
+If you have any question, join our Telegram group and we will help you!
+
+👉 [https://t.me/VmosRoms_Chat](https://t.me/VmosRoms_Chat)
+
+
 
 ## What can GeekTool script do?
 ### Custom ROM Fix
