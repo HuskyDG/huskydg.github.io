@@ -67,23 +67,6 @@ Old but gold, a good solution for ROOT, currently VMOS uses `su` binary from Kou
 [koush/Superuser](https://github.com/koush/Superuser): Why another Superuser?
  
 
-### SUHide
-
-> This is not a good hide-root solution but at least we have
-
-Modified version from RootCloak.
-
-To hide root, we need to hide `su` command. If we delete `su` command means we remove root access from apps. The purpose of hiding root is that `su` must become invisible for blacklist apps while keep it visible for other apps to continue getting root access.
-
-`su` binary need to move to somewhere else except `/system/bin`, `/system/xbin` and `/sbin` because almost app will scan `su` in those folder. The chosen folder to place `su` is `/system_root/dev/$random_str` and add it to `PATH`
-
-Chosen apps in Hidelist will follow this rules:
-
-- `/system_root/dev/$random_str` will be removed from `PATH` variable of chosen apps and app cannot locate where `su` command exist
-
-- These thing can also be hidden: Busybox installed to `/system_roor/dev/$random_str` and Xposed Framework (not sure, except Xposed Installer app)
-
-VMOS PRO has many restriction, so there are no way to completely hide root access as **MagiskHide** do
 
 
 ### **Shizuku**
