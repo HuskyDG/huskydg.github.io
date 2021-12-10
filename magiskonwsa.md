@@ -2,6 +2,9 @@
 
 Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem for Android)
 
+<img src="https://github.com/HuskyDG/huskydg.github.io/raw/main/img/FCPuQ7VVQAEp8dT.jpeg" /> 
+
+
 ## Feature
 
 - Integrate Magisk and OpenGApps in a few clicks within minutes
