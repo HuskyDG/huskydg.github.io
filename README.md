@@ -1,4 +1,4 @@
-Hi, I'm HuskyDG.
+<img src="https://avatars.githubusercontent.com/u/84650617?s=48&v=4" />  Hi, I'm HuskyDG.
 
 ## Magisk modules
 
