@@ -203,4 +203,11 @@ Virtual machine only accept one `su` command in `PATH` variable and it will be c
 
 ### Can we install Magisk?
 
-Short answer, no.
+No, and the reason is unanswerable.
+
+The way VMOS run its Android is not same as main system. VMOS doesn't have seperate partitions and boot partitions.
+
+You will end up of failure.
+
+
+
