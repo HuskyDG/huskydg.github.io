@@ -16,4 +16,4 @@
 
 [ **Magisk on WSA** ](./magiskonwsa) - Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem for Android)
 
-[ **Magisk on Nox** ](./magiskonnox) - Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem for Android)
+[ **Magisk on Nox** ](http://github.com/HuskyDG/magiskonnox) - Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem for Android)
