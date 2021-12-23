@@ -21,8 +21,7 @@ Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem fo
 
 1. Download this package to your Windows 11 (prebuilt package)
 
-   - For x86_64: [WSA-with-magisk-GApps-pico_1.8.32828.0_x64_Release-Nightly](https://github.com/HuskyDG/MagiskOnWSA/suites/4461595118/artifacts/118554927)
-   - For arm64: [WSA-with-magisk-GApps-pico_1.8.32828.0_arm64_Release-Nightly](https://github.com/HuskyDG/MagiskOnWSA/suites/4461595118/artifacts/118554926)
+   [WSA-with-magisk-GApps-pico_1.8.32828.0_x64_Release-Nightly](https://github.com/HuskyDG/MagiskOnWSA/actions/runs/1502592317)
    
 Or build your own WSA with your customize gapps variant: [LSPosed/MagiskOnWSA](https://github.com/LSPosed/MagiskOnWSA) 
 
