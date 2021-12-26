@@ -16,4 +16,4 @@
 
 [ **Magisk on WSA** ](./magiskonwsa) - Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem for Android)
 
-[ **Magisk on Nox** ](./magiskonnox) - Integrate Magisk root and Google Apps (OpenGApps) into WSA (Windows Subsystem for Android)
+[ **Magisk on Nox** ](./magiskonnox) - Integrate Magisk root into NoxPlayer emulator Android 9 and other emulators (Bluestacks, LDPlayer, MEMu, etc...)
