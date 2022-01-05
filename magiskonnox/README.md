@@ -2,11 +2,15 @@
 
 
 ## About
-Integrate Magisk root into Android Emulator (NoxPlayer, MEmu, LDPlayer, ...) and Android x86 project (BlissOS)
+Integrate Magisk root into Nox Player and other Android x86, emulators
 
-<img src="https://github.com/HuskyDG/MagiskOnNox/raw/main/Screenshot%20(3).png" />
+**Magisk on NoxPlayer Android 9 emulator**
 
-[Video: How to install Magisk and LSPosed on Nox Player emulator]( https://youtu.be/ZtZQPfZjFuU)
+<img src="https://i.imgur.com/dkuKfDt.png" />
+
+**Magisk on BlissOS 11 - Android 9**
+
+<img src="https://i.imgur.com/udNrMx2.jpg"/>
 
 ## Features
 
