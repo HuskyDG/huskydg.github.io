@@ -2,7 +2,7 @@
 
 
 ## About
-Integrate Magisk root into Nox Player and other emulators (based on [MagiskOnWSA](https://github.com/LSPosed/MagiskOnWSA))
+Integrate Magisk root into Android Emulator (NoxPlayer, MEmu, LDPlayer, ...) and Android x86 project (BlissOS)
 
 <img src="https://github.com/HuskyDG/MagiskOnNox/raw/main/Screenshot%20(3).png" />
 
