@@ -8,8 +8,8 @@
 
 ## Other stuffs
 
-[**MCPE Downloader**](./mcdownload) - An app used for downloading or updating MCPE for free.
-
 [**Magisk on WSA**](./magiskonwsa) - Integrate Magisk root and OpenGApps into WSA.
 
-[**Magisk on Nox**](./magiskonnox) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
+[**Magisk on Emu**](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
+
+[**Magisk on Android-x86**](http://github.com/huskydg/initrd-magisk) - Integrate Magisk into Android-x86 project such as BlissOS, PrimeOS,...
