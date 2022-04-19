@@ -1,51 +1,14 @@
-# Magisk on VphoneGaga
+# VphoneGaga + Magisk
 
 <img src="https://i.imgur.com/s67IoUZ.jpg"/>
 
+Tutorial How to install Magisk on VphoneGaga Android 10:
 
+1. Download [VphoneGaga VIP Mod](https://link1s.com/VGaga_A10_Mod). Support Magisk is not a free feature on original VphoneGaga app. 
 
-Set up a proper minial Magisk on VphoneGaga virtual machine without patching boot image
+2. Launch the virtual machine. Enable Root and Magisk in settings then restart.
 
-VphoneGaga 32bit and 64bit now supported!
+3. Install Magisk app into virtual machine. Open Magisk app → Install button → Direct install.
 
-Good news for anyone who want to run Magisk on VMOS: Vphone have proper system and can run Magisk properly thanks to [emulator.sh](https://github.com/topjohnwu/Magisk/blob/master/scripts/emulator.sh) script by **topjohnwu**. 
+4. Turn off Root in virtual machine app settings. Restart and enjoy!
 
-### Installation
-
-  1. Download `vmostool_magisk.zip`
-  2. Import to VphoneGaga. You can find it at `/sdcard/Documents`, extract to any folder. For example here `/sdcard/Documents/vmostool_magisk`.
-  3. Open Terminal app, grant superuser first by `su` command then run `sh <extracted_folder>/vphonegaga.sh`.
-  
-  For example run:
-```
-su
-sh /sdcard/Documents/vmostool_magisk/vphonegaga
-```
-  4. Reboot the virtual machine.
-
-     If you want to load Magisk then run this command:
-```
-su
-magisk_root enable
-```
-
-
-Also reboot to make it work...
-
-Only install Magisk Manager v8.0.0
-Newer Magisk doesn't work
-
-
-## Limitations 
-
-- **Only MagiskSU works:** it can prompt Superuser request when app excute `su` binary
-- **MagiskHide:** Android's kernel on this virtual machine was too old and didn't support Mount Namespace which is used by MagiskHide to hide itself by unmount /sbin/su from other app
-- **MagiskModule** `/dev/tmp` issue so module failed to install
-- VphoneGaga blocks Magisk from running on post-fs-data stage so if Magisk Module is installed, it won't work
-
-
-
-## Download
-
-Download link: https://link1s.com/MagiskVphoneGaGa
-VPhoneGaGa link: https://link1s.com/VphoneGaga
