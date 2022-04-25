@@ -7,10 +7,10 @@ Translated to English
 
 Not long ago, developers Rikka & vvb2060 launched an environmental detection application Momo , which smashed various anti-detection methods that people have always trusted. Below I will analyze this may be the strongest environmental detection application in history through some of the open source code.
 
-Detect Magisk
-This part only analyzes interesting things. For other specific implementation details of MagiskDetector, please check directly https://github.com/vvb2060/MagiskDetector/blob/master/README_ZH.md
+## Detect Magisk
+This part only analyzes interesting things. For other specific implementation details of MagiskDetector, please check directly [Magisk Detector](https://github.com/vvb2060/MagiskDetector/blob/master/README_ZH.md)
 
-Anti-Magisk Hide
+## Anti-Magisk Hide
 First analyze the principle of Magisk Hide:
 
 ```
@@ -196,7 +196,7 @@ After inspection, the application uses an isolated process to check Magisk, but 
 Detect the modification of init.rc:
 Random only works if it cannot be traversed. If it can be traversed, statistical methods can be used to find exactly what is different each time.
 
-This sentence looks a bit confusing, just look at the Magisk source code. https://github.com/topjohnwu/Magisk/blob/master/native/jni/init/rootdir.cpp#L45:
+This sentence looks a bit confusing, just look at the Magisk source code. [init/rootdir.cpp](https://github.com/topjohnwu/Magisk/blob/master/native/jni/init/rootdir.cpp):
 
 ```
 // Inject Magisk rc scripts 
@@ -210,8 +210,8 @@ fprintf (rc, MAGISK_RC, tmp_dir, pfd_svc, ls_svc, bc_svc);
 
 Magisk will inject three of its own services into init.rc at startup to receive events such as post-fs-data; the names of these three services are randomized, and init will actually go to the system properties Add init.svc.<service name>a property like this, with a value of running or stopped, to tell other processes the status of the service. MagiskDetector takes advantage of this mechanism, traverses the system properties to record all service names, and then knows whether any service names have changed after the user restarts.
 
-Detect SELinux rules
-https://github.com/topjohnwu/Magisk/blob/master/native/jni/magiskpolicy/rules.cpp
+## Detect SELinux rules
+[magiskpolicy/rules.cpp](https://github.com/topjohnwu/Magisk/blob/master/native/jni/magiskpolicy/rules.cpp)
 
 ```
 // Allow these processes to access MagiskSU 
