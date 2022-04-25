@@ -10,7 +10,7 @@ Not long ago, developers Rikka & vvb2060 launched an environmental detection app
 ## Detect Magisk (Documentation by vvb2060)
 
 ### Magic Hide
-The core of Magisk Hide is the mount namespace. After magiskd waits for the mount namespace of the zygote child process to be separated from the parent process, it unloads all Magisk mounts to the child process. Due to the nature of mount namespaces, the unmount operation will affect the child process of this child process, but not zygote. zygote is the parent process of all application processes, if zygote is handled by Magisk Hide, all applications will lose root. MountModeThere is a parameter when zygote starts a new process , when it is Zygote.MOUNT_EXTERNAL_NONE, the new process does not mount the storage space, and there is no mount namespace separation step.
+The core of Magisk Hide is the mount namespace. After magiskd waits for the mount namespace of the zygote child process to be separated from the parent process, it unloads all Magisk mounts to the child process. Due to the nature of mount namespaces, the unmount operation will affect the child process of this child process, but not zygote. zygote is the parent process of all application processes, if zygote is handled by Magisk Hide, all applications will lose root. MountModeThere is a parameter when zygote starts a new process , when it is `Zygote.MOUNT_EXTERNAL_NONE`, the new process does not mount the storage space, and there is no mount namespace separation step.
 
 There are two cases, one is that the read storage space op of the application appops is ignored, and the other is that the process is an isolated process. The former application itself cannot be operated, and the latter has been supported since Android 4.1. In addition, an interesting feature of the isolated process is the random UID, which is different every time it runs. This interesting feature causes Magisk Hide to skip the process and not handle it before detecting the mount namespace.
 
@@ -162,19 +162,19 @@ not_target:
      
 ```
 
-hide_daemon will fork a new process, setns to the namespace of the target process, and then uninstall everything that has been modified by magisk. Note that there is an if judgment in it. If the namespace is not separated, unmounting will affect zygote and thus all the processes that are started later, then skip it directly. That's Magisk Hide's first question.
+`hide_daemon` will fork a new process, setns to the namespace of the target process, and then uninstall everything that has been modified by magisk. Note that there is an if judgment in it. If the namespace is not separated, unmounting will affect zygote and thus all the processes that are started later, then skip it directly. That's Magisk Hide's first question.
 
 In the introduction to the implementation details of MagiskDetector, it is stated that there are two situations that meet:
 
 One is that the read storage space op of the application appops is ignored, and the other is that the process is an isolated process.
 
-The isolated process here refers to android:isolatedProcess="true"the service. Moreover, there is also a (private) interesting (goods) thing on Android 10 called App Zygote. There is almost no description for this thing. The only document is ZygotePreload , which feels more like a backdoor opened by Google to Chrome. Ahem, off topic, this thing runs in a separate process and doesn't separate namespaces.
+The isolated process here refers to `android:isolatedProcess="true"` the service. Moreover, there is also a (private) interesting (goods) thing on Android 10 called App Zygote. There is almost no description for this thing. The only document is ZygotePreload , which feels more like a backdoor opened by Google to Chrome. Ahem, off topic, this thing runs in a separate process and doesn't separate namespaces.
 
 There are currently two known solutions to this problem. The first is Magisk Lite , which directly uninstalls zygote instead of applying it, but this method will destroy many existing modules; the other is to use process injection to forcibly separate namespaces , the typical solution is Riru-Unshare .
 
 Ok, this question is over, the next one~~
 
-In the above judgment code, the read process name part is /proc/<pid>/cmdlinejudged by reading; in fact, the length of the content of this file is limited! This means that when the configured process name is too long, the process name read by Magisk will not match, thus skipping the process! This is the rationale for Issue #3997 . Magisk has made a temporary fix for this: if the prefix matches, it is directly considered to be the target process to hide.
+In the above judgment code, the read process name part is `/proc/<pid>/cmdline` judged by reading; in fact, the length of the content of this file is limited! This means that when the configured process name is too long, the process name read by Magisk will not match, thus skipping the process! This is the rationale for [Issue#3997](https://github.com/topjohnwu/magisk/issues/3997)  . Magisk has made a temporary fix for this: if the prefix matches, it is directly considered to be the target process to hide.
 
 Is it finished? No. The next problem is when adding the process to the database:
 
@@ -208,7 +208,7 @@ static  bool  validate ( const  char *s)  { if ( strcmp (s, ISOLATED_MAGIC) == 0
     return dot;
 }
 ```
-The package name and process name will be checked here. If it contains illegal characters or no dots, it is considered to be an invalid process. Android has strict regulations on package names, and android:processalso regulations on process names through configuration. It seems that it can't be a demon? However the problem does occur: Issue #4176 .
+The package name and process name will be checked here. If it contains illegal characters or no dots, it is considered to be an invalid process. Android has strict regulations on package names, and android:process also regulations on process names through configuration. It seems that it can't be a demon? However the problem does occur: [Issue#4176](https://github.com/topjohnwu/magisk/issues/4176) .
 
 After inspection, the application uses an isolated process to check Magisk, but the difference is that its service class name contains illegal characters (Java does not limit class names), and Android 10+, the system will append the class name to the name of the isolated process ( https://t.me/vvb2060Channel/441), causing the check to fail. The solution is also very simple, just modify this validate.
 
@@ -227,7 +227,7 @@ LOGD( "Inject magisk services: [%s] [%s] [%s]\n" , pfd_svc, ls_svc, bc_svc);
 fprintf (rc, MAGISK_RC, tmp_dir, pfd_svc, ls_svc, bc_svc);
 ```
 
-Magisk will inject three of its own services into init.rc at startup to receive events such as post-fs-data; the names of these three services are randomized, and init will actually go to the system properties Add init.svc.<service name>a property like this, with a value of running or stopped, to tell other processes the status of the service. MagiskDetector takes advantage of this mechanism, traverses the system properties to record all service names, and then knows whether any service names have changed after the user restarts.
+Magisk will inject three of its own services into `init.rc` at startup to receive events such as post-fs-data; the names of these three services are randomized, and init will actually go to the system properties Add init.svc.<service name>a property like this, with a value of running or stopped, to tell other processes the status of the service. MagiskDetector takes advantage of this mechanism, traverses the system properties to record all service names, and then knows whether any service names have changed after the user restarts.
 
 ## Detect SELinux rules
 [magiskpolicy/rules.cpp](https://github.com/topjohnwu/Magisk/blob/master/native/jni/magiskpolicy/rules.cpp)
@@ -264,12 +264,12 @@ Not only the permissive mode, if you add allow appdomain xxx relabelfromsuch rul
 
 SELinux is an important part of Android's security mechanism, and it is strongly discouraged to set it to permissive mode or ignore neverallow to add rules at will.
 
-Off topic: Detecting magiskd
+### Off topic: Detecting magiskd
 Although MagiskDetector does not use this method, it is a bit interesting, so I can talk about it.
 Before Android 7, /procthere was no limit, and anyone could traverse to get the process list; in 7, it was added hidepid=2, but not all manufacturers kept up; for these devices, just scan to see if there is magiskda process called Make sure there is no magisk.
 
-# Xposed
-## Detect Xposed
+## Xposed
+### Detect Xposed
 The original Xposed framework added its own classes to the bootclasspath, which made it easy for anyone to find them. After that, everyone chose to isolate the classloader, making detection less easy; however, as long as it exists in memory, it can be found. The principle of XposedDetector is very simple. Through an internal interface of art (VisitRoots), find all ClassLoaders in the heap, and then try them one by one. At present, lsp, edxp, dreamland, etc. are only loaded in the target application to prevent accidental injury. Of course it's okay to hook this function, but we don't want to play this cat-and-mouse game, we can only ensure that the environment of the non-target application is not modified.
 
 ## Anti-Xposed Hook
