@@ -7,7 +7,7 @@ Translated to English
 
 Not long ago, developers Rikka & vvb2060 launched an environmental detection application Momo , which smashed various anti-detection methods that people have always trusted. Below I will analyze this may be the strongest environmental detection application in history through some of the open source code.
 
-## Detect Magisk
+## Detect Magisk (Documentation by vvb2060)
 
 ### Magic Hide
 The core of Magisk Hide is the mount namespace. After magiskd waits for the mount namespace of the zygote child process to be separated from the parent process, it unloads all Magisk mounts to the child process. Due to the nature of mount namespaces, the unmount operation will affect the child process of this child process, but not zygote. zygote is the parent process of all application processes, if zygote is handled by Magisk Hide, all applications will lose root. MountModeThere is a parameter when zygote starts a new process , when it is Zygote.MOUNT_EXTERNAL_NONE, the new process does not mount the storage space, and there is no mount namespace separation step.
