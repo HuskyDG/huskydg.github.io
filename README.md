@@ -9,6 +9,12 @@ Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 
 [**Bootloop Saver**](https://github.com/HuskyDG/Magisk_BootloopSaver) - Protect your system from bootloop caused by Magisk modules.
 
+[**OverlayFS**](https://github.com/magisk-modules-alt-repo/magisk_OverlayFS) - Emulate read-write partition for read-only system partitions
+
+[**Magic FlashTool**](https://github.com/magisk-modules-alt-repo/magic-flash) - An android CLI flash tool without custom recoveries
+
+[**Safety Permissive**](https://huskydg.github.io/safety_permissive.zip) - Turn Selinux mode into Permissive and keep it hidden from other apps
+
 ## Other stuffs
 
 [**Magisk on WSA**](./magiskonwsa) - Integrate Magisk root and OpenGApps into WSA.
