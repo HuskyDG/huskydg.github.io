@@ -8,7 +8,26 @@ Translated to English
 Not long ago, developers Rikka & vvb2060 launched an environmental detection application Momo , which smashed various anti-detection methods that people have always trusted. Below I will analyze this may be the strongest environmental detection application in history through some of the open source code.
 
 ## Detect Magisk
-This part only analyzes interesting things. For other specific implementation details of MagiskDetector, please check directly [Magisk Detector](https://github.com/vvb2060/MagiskDetector/blob/master/README_ZH.md)
+
+### Magic Hide
+The core of Magisk Hide is the mount namespace. After magiskd waits for the mount namespace of the zygote child process to be separated from the parent process, it unloads all Magisk mounts to the child process. Due to the nature of mount namespaces, the unmount operation will affect the child process of this child process, but not zygote. zygote is the parent process of all application processes, if zygote is handled by Magisk Hide, all applications will lose root. MountModeThere is a parameter when zygote starts a new process , when it is Zygote.MOUNT_EXTERNAL_NONE, the new process does not mount the storage space, and there is no mount namespace separation step.
+
+There are two cases, one is that the read storage space op of the application appops is ignored, and the other is that the process is an isolated process. The former application itself cannot be operated, and the latter has been supported since Android 4.1. In addition, an interesting feature of the isolated process is the random UID, which is different every time it runs. This interesting feature causes Magisk Hide to skip the process and not handle it before detecting the mount namespace.
+
+### Detect Magisk modules
+Although the Magisk module can be hidden on the file system, the modified content has been loaded into the process memory, which can be found by checking the maps of the process. The data displayed by maps contains the device on which the loaded file is located. The Magisk module will cause the path of some files to be in the system partition or vendor partition, but the displayed device location is the data partition.
+
+### Detect MagiskSU
+Under normal circumstances, applications cannot connect to sockets not established by themselves, but Magisk modified SELinux. All applications can connect to the socket of the magisk domain. Each Magisk su process will establish a socket and try to connect all sockets. The number of sockets that are not rejected by SELinux is the number of su processes. The reliability of this detection method depends entirely on the strictness of SELinux rules, and Android versions that are too low or too high will cause problems.
+
+### Test SELinux Policy
+SU software must pay attention to the following principles when modifying the SELinux policy, otherwise there will be security loopholes and ways to be detected.
+
+The source domain and the target domain, one of which is the custom domain of the su program, it is safe to add rules;
+Both parties are non-application domain and need to have a reasonable and necessary reason;
+One side is the application domain, and adding rules is very dangerous. If it is the origin domain, the addition should be rejected.
+### Detect init.rc modifications
+Random only works if it cannot be traversed. If it can be traversed, statistical methods can be used to find exactly what is different each time.
 
 ## Anti-Magisk Hide
 First analyze the principle of Magisk Hide:
