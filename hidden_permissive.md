@@ -7,6 +7,11 @@
 - Download this module: [Click here](http://huskydg.github.io/safety_permissive.zip)
 - In some Android x86 build (such as PrimeOS 2.x), early enforcing causes system bootloop. Use file manager and browse to `/data/adb/modules/safety_permissive`, create a file named `late` to enable late mode.
 
+## Feature
+
+- Fake SELinux Enforcing
+- Hide SU processes
+
 ## Changelogs
 
 ### v1.1
