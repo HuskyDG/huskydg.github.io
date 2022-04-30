@@ -24,3 +24,7 @@ Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 [**Magisk on Emulator for PC**](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
 
 [**Magisk on Android-x86 project**](http://github.com/huskydg/initrd-magisk) - Integrate Magisk into Android-x86 project such as BlissOS, PrimeOS,... (Android 9+)
+
+## Blogs
+
+[**Detect Magisk and Xposed**](./detect_magisk_xposed) by canyie, vvb2060
