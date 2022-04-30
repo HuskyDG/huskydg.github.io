@@ -9,16 +9,16 @@ Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 
 [**Bootloop Saver**](https://github.com/HuskyDG/Magisk_BootloopSaver) - Protect your system from bootloop caused by Magisk modules.
 
-[**OverlayFS**](https://github.com/magisk-modules-alt-repo/magisk_OverlayFS) - Emulate read-write partition for read-only system partitions
+[**OverlayFS**](https://github.com/magisk-modules-alt-repo/magisk_OverlayFS) - Emulate read-write partition for read-only system partitions.
 
-[**Magic FlashTool**](https://github.com/magisk-modules-alt-repo/magic-flash) - An android CLI flash tool without custom recoveries
+[**Magic FlashTool**](https://github.com/magisk-modules-alt-repo/magic-flash) - An android CLI flash tool without custom recoveries.
 
-[**Safety Permissive**](https://huskydg.github.io/safety_permissive.zip) - Turn Selinux mode into Permissive and keep it hidden from other apps
+[**Hidden Permissive**](https://huskydg.github.io/hidden_permissive) - Turn Selinux mode into Permissive and keep it hidden from other apps.
 
 ## Other stuffs
 
 [**Magisk on WSA**](./magiskonwsa) - Integrate Magisk root and OpenGApps into WSA.
 
-[**Magisk on Emu**](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
+[**Magisk on Emulator**](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
 
-[**Magisk on Android-x86**](http://github.com/huskydg/initrd-magisk) - Integrate Magisk into Android-x86 project such as BlissOS, PrimeOS,...
+[**Magisk on Android-x86 project**](http://github.com/huskydg/initrd-magisk) - Integrate Magisk into Android-x86 project such as BlissOS, PrimeOS,... (Android 9+)
