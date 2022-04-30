@@ -17,8 +17,10 @@ Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 
 ## Other stuffs
 
-[**Magisk on WSA**](./magiskonwsa) - Integrate Magisk root and OpenGApps into WSA.
+[**Magisk on Windows Subsystem for Android**](./magiskonwsa) - Integrate Magisk root and OpenGApps into WSA.
 
-[**Magisk on Emulator**](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
+[**Magisk on VphoneGaga**](./vphonegaga/magisk) - Intergrate Magisk root into VphoneGaga virtual machine for Android.
+
+[**Magisk on Emulator for PC**](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
 
 [**Magisk on Android-x86 project**](http://github.com/huskydg/initrd-magisk) - Integrate Magisk into Android-x86 project such as BlissOS, PrimeOS,... (Android 9+)
