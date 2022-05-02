@@ -46,18 +46,24 @@ cat <<EOF >/dev/se.rule
 permissive *
 allow untrusted_app * * *
 allow isolated_app * * *
+allow untrusted_app_29 * * *
+allow app_zygote * * *
 deny untrusted_app untrusted_app process setcurrent
-deny { untrusted_app isolated_app } * process dyntransition
+deny app_zygote app_zygote process setcurrent
+deny untrusted_app_29 untrusted_app_29 process setcurrent
 deny isolated_app isolated_app process setcurrent
-deny { untrusted_app isolated_app } adb_data_file  * * 
-deny { untrusted_app isolated_app } rootfs file { read write }
-deny { untrusted_app isolated_app } selinuxfs file { read write open }
-deny { untrusted_app isolated_app } * property_service { set }
-deny { untrusted_app isolated_app } display_service service_manager find
-deny { untrusted_app isolated_app } keystore keystore_key *
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * process dyntransition
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } adb_data_file  * * 
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } rootfs file { read write }
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } selinuxfs file { read write open }
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * property_service { set }
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } display_service service_manager find
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } keystore keystore_key *
 deny init * file relabelto
 enforce untrusted_app
 enforce isolated_app
+enforce app_zygote
+enforce untrusted_app_29
 EOF
 magiskpolicy --load /dev/ramdisk/sepolicy --save /dev/ramdisk/sepolicy --apply /dev/se.rule
 [ ! -f "/dev/ramdisk/init.rc.bak" ] && cp /dev/ramdisk/init.rc /dev/ramdisk/init.rc.bak
@@ -85,18 +91,24 @@ cat <<EOF >/dev/se.rule
 permissive *
 allow untrusted_app * * *
 allow isolated_app * * *
+allow untrusted_app_29 * * *
+allow app_zygote * * *
 deny untrusted_app untrusted_app process setcurrent
-deny { untrusted_app isolated_app } * process dyntransition
+deny app_zygote app_zygote process setcurrent
+deny untrusted_app_29 untrusted_app_29 process setcurrent
 deny isolated_app isolated_app process setcurrent
-deny { untrusted_app isolated_app } adb_data_file  * * 
-deny { untrusted_app isolated_app } rootfs file { read write }
-deny { untrusted_app isolated_app } selinuxfs file { read write open }
-deny { untrusted_app isolated_app } * property_service { set }
-deny { untrusted_app isolated_app } display_service service_manager find
-deny { untrusted_app isolated_app } keystore keystore_key *
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * process dyntransition
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } adb_data_file  * * 
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } rootfs file { read write }
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } selinuxfs file { read write open }
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * property_service { set }
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } display_service service_manager find
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote } keystore keystore_key *
 deny init * file relabelto
 enforce untrusted_app
 enforce isolated_app
+enforce app_zygote
+enforce untrusted_app_29
 EOF
 if [ -f "/vendor/etc/selinux/precompiled_sepolicy" ]; then
 magiskpolicy --load /vendor/etc/selinux/precompiled_sepolicy --save /vendor/etc/selinux/precompiled_sepolicy --apply /dev/se.rule
