@@ -19,6 +19,7 @@
 
 ```
 RAMDISK="./ramdisk.img" # patch to your ramdisk image
+rm -rf /dev/ramdisk
 mkdir /dev/ramdisk
 cd /dev/ramdisk && zcat "$RAMDISK" | cpio -iud && {
 cat <<EOF >/dev/se.rule
@@ -50,8 +51,10 @@ cat <<EOF >>/dev/ramdisk/init.rc
   on property:sys.boot_completed=1
      chmod 660 /sys/fs/selinux/enforce
      chmod 440 /sys/fs/selinux/policy
+     chmod 440 /proc/net/unix
 EOF
 } && { find * | cpio -o -H newc | gzip >"$RAMDISK"; }
+rm -rf /dev/ramdisk
 ```
 
 - On system-as-root build, directly patch system: 
@@ -85,6 +88,7 @@ cat <<EOF >>/system/etc/init/selinux_enforce.rc
      exec u:r:su:s0 root root -- /system/bin/setenforce 1
      chmod 660 /sys/fs/selinux/enforce
      chmod 440 /sys/fs/selinux/policy
+     chmod 440 /proc/net/unix
 EOF
 }
 ```
