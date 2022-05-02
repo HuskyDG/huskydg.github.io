@@ -44,7 +44,7 @@ cp /dev/ramdisk/init.rc.bak /dev/ramdisk/init.rc
 cat <<EOF >>/dev/ramdisk/init.rc
 
   on post-fs-data
-     exec u:r:su:s0 root root -- "/system/bin/setenforce 1"
+     exec u:r:su:s0 root root -- /system/bin/setenforce 1
 EOF
 } && { find * | cpio -o -H newc | gzip >"$RAMDISK"; }
 ```
