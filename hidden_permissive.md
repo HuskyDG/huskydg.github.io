@@ -16,10 +16,22 @@
 - Prevent normal apps from switching contexts to detect Magisk (`u:r:magisk:s0`)
 
 
-## Android x86 ROM Integration
+## Changelogs
 
-<details>
-<summary>Show more</summary>
+### v1.2
+
+- Change SELinux mode to Enforcing after boot completed on Android 10+ to avoid breaking system.
+
+### v1.1
+
+- Add more denials for untrusted_app and isolated_app to bypass [MagiskDetector](http://github.com/vvb2060/MagiskDetector).
+
+### v1.0
+
+- Initial release
+
+
+## Android x86 ROM Integration
 
 - It's possible to include this patch into Android x86 project without having to rely on Magisk module.
 
@@ -102,21 +114,3 @@ EOF
 }
 ```
 
-</details>
-
-
-
-
-## Changelogs
-
-### v1.2
-
-- Change SELinux mode to Enforcing after boot completed on Android 10+ to avoid breaking system.
-
-### v1.1
-
-- Add more denials for untrusted_app and isolated_app to bypass [MagiskDetector](http://github.com/vvb2060/MagiskDetector).
-
-### v1.0
-
-- Initial release
