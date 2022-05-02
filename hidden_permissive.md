@@ -45,6 +45,11 @@ cat <<EOF >>/dev/ramdisk/init.rc
 
   on post-fs-data
      exec u:r:su:s0 root root -- /system/bin/setenforce 1
+     chmod 751 /
+
+  on property:sys.boot_completed=1
+     chmod 660 /sys/fs/selinux/enforce
+     chmod 440 /sys/fs/selinux/policy
 EOF
 } && { find * | cpio -o -H newc | gzip >"$RAMDISK"; }
 ```
@@ -77,7 +82,9 @@ fi
 cat <<EOF >>/system/etc/init/selinux_enforce.rc
 
   on property:sys.boot_completed=1
-     exec u:r:su:s0 root root -- "/system/bin/setenforce 1"
+     exec u:r:su:s0 root root -- /system/bin/setenforce 1
+     chmod 660 /sys/fs/selinux/enforce
+     chmod 440 /sys/fs/selinux/policy
 EOF
 }
 ```
