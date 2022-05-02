@@ -98,7 +98,7 @@ deny init * file relabelto
 enforce untrusted_app
 enforce isolated_app
 EOF
-if [ -f "/vendor/etc/selinux/precompiled_sepolicy" ]; do
+if [ -f "/vendor/etc/selinux/precompiled_sepolicy" ]; then
 magiskpolicy --load /vendor/etc/selinux/precompiled_sepolicy --save /vendor/etc/selinux/precompiled_sepolicy --apply /dev/se.rule
 else 
 magiskpolicy --load /sepolicy --save /sepolicy --apply /dev/se.rule
