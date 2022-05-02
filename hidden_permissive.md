@@ -76,7 +76,7 @@ magiskpolicy --load /sepolicy --save /sepolicy --apply /dev/se.rule
 fi
 cat <<EOF >>/system/etc/init/selinux_enforce.rc
 
-  on post-fs-data
+  on property:sys.boot_completed=1
      exec u:r:su:s0 root root -- "/system/bin/setenforce 1"
 EOF
 }
