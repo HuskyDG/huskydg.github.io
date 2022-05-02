@@ -33,7 +33,7 @@
 
 ## Android x86 ROM Integration
 
-- It's possible to include this patch into Android x86 project without having to rely on Magisk module.
+- It's possible to include this patch into Android x86 project without having to rely on Magisk module. You must have `magiskpolicy` tool in order to patch.
 
 - On Android rootfs build, apply this patch into `ramdisk.img`:
 
@@ -41,30 +41,8 @@
 RAMDISK="./ramdisk.img" # patch to your ramdisk image
 rm -rf /dev/ramdisk
 mkdir /dev/ramdisk
-cd /dev/ramdisk && zcat "$RAMDISK" | cpio -iud && {
-cat <<EOF >/dev/se.rule
-permissive *
-allow untrusted_app * * *
-allow isolated_app * * *
-allow untrusted_app_29 * * *
-allow app_zygote * * *
-deny untrusted_app untrusted_app process setcurrent
-deny app_zygote app_zygote process setcurrent
-deny untrusted_app_29 untrusted_app_29 process setcurrent
-deny isolated_app isolated_app process setcurrent
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * process dyntransition
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } adb_data_file  * * 
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } rootfs file { read write }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } selinuxfs file { read write open }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * property_service { set }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } display_service service_manager find
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } keystore keystore_key *
-deny init * file relabelto
-enforce untrusted_app
-enforce isolated_app
-enforce app_zygote
-enforce untrusted_app_29
-EOF
+cd /dev/ramdisk && zcat "$RAMDISK" | cpio -iud && wget https://raw.githubusercontent.com/HuskyDG/huskydg.github.io/main/se.rule -O /dev/se.rule
+&& {
 magiskpolicy --load /dev/ramdisk/sepolicy --save /dev/ramdisk/sepolicy --apply /dev/se.rule
 [ ! -f "/dev/ramdisk/init.rc.bak" ] && cp /dev/ramdisk/init.rc /dev/ramdisk/init.rc.bak
 cp /dev/ramdisk/init.rc.bak /dev/ramdisk/init.rc
@@ -86,30 +64,8 @@ rm -rf /dev/ramdisk
 - On system-as-root build, directly patch system: 
 
 ```
-mount -o rw,remount / && {
-cat <<EOF >/dev/se.rule
-permissive *
-allow untrusted_app * * *
-allow isolated_app * * *
-allow untrusted_app_29 * * *
-allow app_zygote * * *
-deny untrusted_app untrusted_app process setcurrent
-deny app_zygote app_zygote process setcurrent
-deny untrusted_app_29 untrusted_app_29 process setcurrent
-deny isolated_app isolated_app process setcurrent
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * process dyntransition
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } adb_data_file  * * 
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } rootfs file { read write }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } selinuxfs file { read write open }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * property_service { set }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } display_service service_manager find
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } keystore keystore_key *
-deny init * file relabelto
-enforce untrusted_app
-enforce isolated_app
-enforce app_zygote
-enforce untrusted_app_29
-EOF
+mount -o rw,remount / && wget https://raw.githubusercontent.com/HuskyDG/huskydg.github.io/main/se.rule -O /dev/se.rule
+&& {
 if [ -f "/vendor/etc/selinux/precompiled_sepolicy" ]; then
 magiskpolicy --load /vendor/etc/selinux/precompiled_sepolicy --save /vendor/etc/selinux/precompiled_sepolicy --apply /dev/se.rule
 else 
