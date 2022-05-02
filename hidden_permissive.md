@@ -10,8 +10,16 @@
 
 - Fake SELinux Enforcing
 - Hide SU processes
+- Hide Magisk UDS and state (Oprek Detection)
+- Hide read-write rootfs (Oprek Detection)
+- Prevent normal apps from changing system property
+- Prevent normal apps from switching contexts to detect Magisk (`u:r:magisk:s0`)
+
 
 ## Android x86 ROM Integration
+
+<details>
+<summary>Show more</summary>
 
 - It's possible to include this patch into Android x86 project without having to rely on Magisk module.
 
@@ -58,6 +66,7 @@ rm -rf /dev/ramdisk
 ```
 
 - On system-as-root build, directly patch system: 
+
 ```
 mount -o rw,remount / && {
 cat <<EOF >/dev/se.rule
@@ -93,6 +102,7 @@ EOF
 }
 ```
 
+</details>
 
 ## Changelogs
 
