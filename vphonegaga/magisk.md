@@ -4,7 +4,7 @@
 
 Tutorial How to install Magisk on VphoneGaga Android 10:
 
-1. Download [VphoneGaga VIP Mod](https://link1s.com/VGaga_A10_Mod). Support Magisk is not a free feature on original VphoneGaga app. 
+1. Download [VphoneGaga VIP Mod by OpenHob](https://link1s.com/VGaga_A10_Mod). Support Magisk is not a free feature on original VphoneGaga app. 
 
 2. Launch the virtual machine. Enable Root and Magisk in settings then restart.
 
