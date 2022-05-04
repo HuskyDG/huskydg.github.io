@@ -41,8 +41,7 @@
 RAMDISK="./ramdisk.img" # patch to your ramdisk image
 rm -rf /dev/ramdisk
 mkdir /dev/ramdisk
-cd /dev/ramdisk && zcat "$RAMDISK" | cpio -iud && wget https://raw.githubusercontent.com/HuskyDG/huskydg.github.io/main/se.rule -O /dev/se.rule
-&& {
+cd /dev/ramdisk && zcat "$RAMDISK" | cpio -iud && wget https://raw.githubusercontent.com/HuskyDG/huskydg.github.io/main/se.rule -O /dev/se.rule && {
 magiskpolicy --load /dev/ramdisk/sepolicy --save /dev/ramdisk/sepolicy --apply /dev/se.rule
 [ ! -f "/dev/ramdisk/init.rc.bak" ] && cp /dev/ramdisk/init.rc /dev/ramdisk/init.rc.bak
 cp /dev/ramdisk/init.rc.bak /dev/ramdisk/init.rc
@@ -64,8 +63,7 @@ rm -rf /dev/ramdisk
 - On system-as-root build, directly patch system: 
 
 ```
-mount -o rw,remount / && wget https://raw.githubusercontent.com/HuskyDG/huskydg.github.io/main/se.rule -O /dev/se.rule
-&& {
+mount -o rw,remount / && wget https://raw.githubusercontent.com/HuskyDG/huskydg.github.io/main/se.rule -O /dev/se.rule && {
 if [ -f "/vendor/etc/selinux/precompiled_sepolicy" ]; then
 magiskpolicy --load /vendor/etc/selinux/precompiled_sepolicy --save /vendor/etc/selinux/precompiled_sepolicy --apply /dev/se.rule
 else 
