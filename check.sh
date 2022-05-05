@@ -1,5 +1,5 @@
 # detect some traces
-test ! -z "$LD_PRELPAD" && echo "Found LD_PRELOAD"
+test ! -z "$LD_PRELOAD" && echo "Found LD_PRELOAD"
 unset LD_PRELOAD
 export PATH="/sbin:/system/bin:/system/xbin:$PATH"
 exec 2>/dev/null
