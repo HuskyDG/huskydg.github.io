@@ -16,4 +16,5 @@ mount | grep " / " | grep -q "^/dev/loop" && echo "Alnormal root partition mount
 }
 
 MESSAGE="$(detect)"
-test -z "$MESSAGE" && echo "No suspicious traces were found"
+echo "Scanning..."
+test -z "$MESSAGE" && echo "No suspicious traces were found" || echo "$MESSAGE"
