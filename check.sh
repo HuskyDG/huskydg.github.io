@@ -3,7 +3,7 @@ test ! -z "$LD_PRELPAD" && echo "Found LD_PRELOAD"
 unset LD_PRELOAD
 export PATH="/sbin:/system/bin:/system/xbin:$PATH"
 exec 2>/dev/null
-test "$(cat /sys/fs/selinux/enforce)" != 1 && echo "SeLinux is permissive"
+test "$(cat /sys/fs/selinux/enforce)" == 0 && echo "SeLinux is permissive"
 test "$(runcon u:r:magisk:s0 echo true)" == "true" && echo "Found Magisk context"
 test "$(getprop init.svc.adbd)" != "stopped" && echo "USB Debugging is enabled"
 getprop | grep -q "^[init.svc_debug_pid." && echo "Userdebug build is detected!"
