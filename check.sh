@@ -13,6 +13,7 @@ setprop prop.test true && echo "Found props can be changed"
 test "$(getprop ro.crypto.state)" != "encrypted" && echo "Data is not encrypted"
 mount | grep " /system " | grep -q "^/dev/loop" && echo "Alnormal system partition mounted"
 mount | grep " / " | grep -q "^/dev/loop" && echo "Alnormal root partition mounted"
+{ test -e "/system/addon.d" || test -e "/system/etc/init.d"; } && echo "Found Custom ROM"
 }
 
 MESSAGE="$(detect)"
