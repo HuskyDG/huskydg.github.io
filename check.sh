@@ -1,6 +1,7 @@
 # detect some traces
-test ! -z "$LD_PRELOAD" && echo "Found LD_PRELOAD"
 unset LD_PRELOAD
+
+detect(){
 export PATH="/sbin:/system/bin:/system/xbin:$PATH"
 exec 2>/dev/null
 test "$(cat /sys/fs/selinux/enforce)" == 0 && echo "SeLinux is permissive"
@@ -12,4 +13,7 @@ setprop prop.test true && echo "Found props can be changed"
 test "$(getprop ro.crypto.state)" != "encrypted" && echo "Data is not encrypted"
 mount | grep " /system " | grep -q "^/dev/loop" && echo "Alnormal system partition mounted"
 mount | grep " / " | grep -q "^/dev/loop" && echo "Alnormal root partition mounted"
+}
 
+MESSAGE="$(detect)"
+test -z "$MESSAGE" && echo "No suspicious traces were found"
