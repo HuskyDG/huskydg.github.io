@@ -15,7 +15,7 @@ mount | grep " /system " | grep -q "^/dev/loop" && echo "Alnormal system partiti
 mount | grep " / " | grep -q "^/dev/loop" && echo "Alnormal root partition mounted"
 { test -e "/system/addon.d" || test -e "/system/etc/init.d"; } && echo "Found Custom ROM"
 test -z "$(pidof su)" || echo "Found su process"
-test "$(ls -id /data | awk '{ print $1 }')" && echo "Data partition was mounted abnormally"
+test "$(ls -id /data | awk '{ print $1 }')" != "2" && echo "Data partition was mounted abnormally"
 cat /proc/mounts | grep -q " /proc/cpuinfo " && echo "/proc/cpuinfo is modified"
 }
 
