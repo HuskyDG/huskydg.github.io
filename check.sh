@@ -4,6 +4,7 @@ unset LD_PRELOAD
 detect(){
 export PATH="/sbin:/system/bin:/system/xbin:$PATH"
 exec 2>/dev/null
+test "$(ls -id /system | awk '{ print $1 }')" != "$(ls -id /proc/self/root/system | awk '{ print $1 }')" && echo "Fake environment has been detected"
 test "$(cat /sys/fs/selinux/enforce)" == 0 && echo "SELinux is permissive"
 test "$(runcon u:r:magisk:s0 echo true)" == "true" && echo "Found Magisk contexts. Do not use SELinux Permissive"
 test "$(getprop init.svc.adbd)" != "stopped" && echo "USB Debugging is enabled. Set property init.svc.adbd to \"stopped\" to hide"
