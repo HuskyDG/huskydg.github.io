@@ -13,7 +13,7 @@ setprop prop.test true && echo "Any apps can change system properties. Do not us
 test "$(getprop ro.crypto.state)" != "encrypted" && echo "Data is not encrypted. Set property ro.crypto.state to \"encrypted\" to hide"
 mount | grep " /system " | grep -q "^/dev/loop" && echo "Alnormal system partition mounted (Cannot hide)"
 mount | grep " / " | grep -q "^/dev/loop" && echo "Alnormal root partition mounted (Cannot hide)"
-{ test -e "/system/addon.d" || test -e "/system/etc/init.d"; } && echo "Found Custom ROM. Remove \"/system/addon.d\" and \"/system/etc/init.d\" to hide"
+{ test -e "/system/addon.d" } && echo "Device (maybe) is using Custom ROM"
 test "$(ls -id /data | awk '{ print $1 }')" != "2" && echo "Data partition was mounted abnormally"
 cat /proc/mounts | grep -q " /proc/cpuinfo " && echo "/proc/cpuinfo is modified"
 }
