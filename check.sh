@@ -17,6 +17,7 @@ mount | grep " / " | grep -q "^/dev/loop" && echo "Alnormal root partition mount
 { test -e "/system/addon.d"; } && echo "Device (maybe) is using Custom ROM"
 ( test "$(ls -id /data | awk '{ print $1 }')" != "2" && test "$(ls -id /data | awk '{ print $1 }')" != "3" ) && echo "Data partition was mounted abnormally"
 cat /proc/mounts | grep -q " /proc/cpuinfo " && echo "CPU information is modified"
+test ! -z "$(mount -t sharefs)" && echo "Detect VphoneGaga or virtual machine"
 }
 
 MESSAGE="$(detect)"
