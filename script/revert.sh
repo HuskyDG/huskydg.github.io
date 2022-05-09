@@ -5,7 +5,6 @@ exec 2>/dev/null
 set -o standalone || exit 1
 
 MAGISKTMP="$(magisk --path)"
-[ -z "$MAGISKTMP" ] && exit
 
 # Unmount dummy skeletons and MAGISKTMP
 MOUNT_LIST="$(for i in /system /vendor /product /system_ext; do
@@ -15,7 +14,7 @@ for hide in $MOUNT_LIST; do
 ( umount -l "$hide" && echo "Unmounted: $hide" ) &
 done
 sleep 0.05
-umount -l "$MAGISKTMP" && echo "unmount: $MAGISKTMP"
+[ ! -z "$MAGISKTMP" ] && umount -l "$MAGISKTMP" && echo "unmount: $MAGISKTMP"
 
 # Unmount all Magisk created mounts
 MOUNT_LIST="$(grep ".magisk/block" /proc/mounts  | awk '{ print $2 }')"
