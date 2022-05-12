@@ -1,4 +1,5 @@
 # Hidden SELinux Permissive
+  SELinux Permissive but more hidden.
 
 ## About
 
@@ -18,6 +19,12 @@
 - Hide read-write rootfs (Oprek Detection)
 - Prevent normal apps from changing system property
 - Prevent normal apps from switching contexts to detect Magisk (`u:r:magisk:s0`)
+
+## FAQs
+
+### Momo shows SELinux rules is modified
+
+This module only prevent apps from doing some abuse actions . It does not add correct rules.
 
 
 ## Changelogs
