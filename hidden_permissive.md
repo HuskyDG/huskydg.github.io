@@ -2,7 +2,11 @@
 
 ## About
 
-- Selinux Permissive is very bad. For Magisk, it causes Magisk cannot completely hidden if you are using MagiskHide or any hiding mechanism (Shamiko). Developer didn't address this problem yet. 
+- Selinux Permissive is very bad. For Magisk, it causes Magisk cannot completely hidden. SELinux Permissive will cause some Magisk traces to be more easily detected. An example when SELinux is Permissive, any apps can switch to u:r:magisk:s0 context to verify magisk, Enforcing normally prevent apps from switching context.
+- Most Android x86 come with SELinux Permissive because developer can't address this problem. 
+
+## What does it do?
+
 - This module will patch selinux to premissive all contexts, apply some denials for `untrusted_app`, `isolated_app` and enforce they. In short, it will make Selinux is enforced for normal apps but system contexts are in Permissive. 
 - Download this module: [Click here](http://huskydg.github.io/safety_permissive.zip)
 
