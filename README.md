@@ -5,16 +5,6 @@ Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 
 ## Magisk modules
 
-Best modules:
-
-
-- [**Zygisk - Shamiko by LSPosed Developers**](https://huskydg.github.io/shamiko) -  Zygisk module to hide Magisk root, Zygisk itself and Zygisk modules like riru hide.
-- [**Riru - MomoHider**](https://github.com/canyie/riru-momohider) - Riru module try to make Magisk more hidden (Deprecated)
-- [**LSPosed Framework**](http://github.com/lsposed/lsposed) - A Riru / Zygisk module trying to provide an ART hooking framework which delivers consistent APIs with the OG Xposed, leveraging LSPlant hooking framework.
-
-
-My custom modules:
-
 - [**RAM Swapper**](https://github.com/HuskyDG/Magisk_RAM_Swapper) - Expand RAM memory by converting a part of storage to swap RAM.
 - [**Bootloop Saver**](https://github.com/HuskyDG/Magisk_BootloopSaver) - Protect your system from bootloop caused by Magisk modules.
 - [**OverlayFS**](https://github.com/magisk-modules-alt-repo/magisk_OverlayFS) - Emulate read-write partition for read-only system partitions.
