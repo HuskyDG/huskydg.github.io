@@ -3,14 +3,10 @@ allow untrusted_app * * *
 allow isolated_app * * *
 allow untrusted_app_29 * * *
 allow app_zygote * * *
-deny untrusted_app untrusted_app process setcurrent
-deny app_zygote app_zygote process setcurrent
-deny untrusted_app_29 untrusted_app_29 process setcurrent
-deny isolated_app isolated_app process setcurrent
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * process dyntransition
+allow { untrusted_app isolated_app untrusted_app_29 app_zygote } { isolated_app app_zygote } process dyntransition
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote } adb_data_file  * * 
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote } rootfs file { read write }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } selinuxfs file { read write open }
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * property_service { set }
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote } display_service service_manager find
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote } keystore keystore_key *
