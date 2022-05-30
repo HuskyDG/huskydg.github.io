@@ -2,9 +2,9 @@
   SELinux Permissive but more hidden.
 
 ## About
+SELinux is very bad, it can lead to serious security issues. SELinux Permissive will cause some Magisk traces to be more easily detected. An example when SELinux is Permissive, any apps can switch to u:r:magisk:s0 context to verify magisk, Enforcing normally prevent apps from switching context. Some apps and games will deny to run if they detect SELinux Permissive.
 
-- Selinux Permissive is very bad. For Magisk, it causes Magisk cannot completely hidden. SELinux Permissive will cause some Magisk traces to be more easily detected. An example when SELinux is Permissive, any apps can switch to u:r:magisk:s0 context to verify magisk, Enforcing normally prevent apps from switching context.
-- Most Android x86 come with SELinux Permissive because developer can't address this problem. 
+Currently Android-x86 is using SELinux because developers didn't address this problem yet.
 
 ## What does it do?
 
