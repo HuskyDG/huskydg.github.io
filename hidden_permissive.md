@@ -9,7 +9,7 @@
 ## What does it do?
 
 - This module will patch selinux to premissive all contexts, apply some denials for `untrusted_app`, `isolated_app` and enforce they. In short, it will make Selinux is enforced for normal apps but system contexts are in Permissive. 
-- Download this module: [Click here](http://huskydg.github.io/safety_permissive.zip)
+- Download this module: [Click here](http://huskydg.github.io/download/selinux_patcher.zip)
 
 ## Feature
 
