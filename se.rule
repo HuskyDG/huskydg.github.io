@@ -1,22 +1,25 @@
 permissive *
 allow untrusted_app * * *
 allow isolated_app * * *
+allow untrusted_app_27 * * *
 allow untrusted_app_29 * * *
 allow app_zygote * * *
 deny untrusted_app * process setcurrent
 deny app_zygote * process setcurrent
 deny untrusted_app_29 * process setcurrent
 deny isolated_app * process setcurrent
-allow { untrusted_app app_zygote untrusted_app_29 isolated_app }  { app_zygote untrusted_app untrusted_app_29 isolated_app } process setcurrent
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * process dyntransition
-allow { untrusted_app isolated_app untrusted_app_29 app_zygote } { isolated_app app_zygote } process dyntransition
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } adb_data_file  * * 
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } rootfs file { read write }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } * property_service { set }
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } display_service service_manager find
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote } keystore keystore_key *
+deny untrusted_app_27 * process setcurrent
+allow { untrusted_app app_zygote untrusted_app_29 isolated_app untrusted_app_27 }  { app_zygote untrusted_app untrusted_app_29 isolated_app untrusted_app_27 } process setcurrent
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } * process dyntransition
+allow { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } { isolated_app app_zygote } process dyntransition
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } adb_data_file  * * 
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } rootfs file { read write }
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } * property_service { set }
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } display_service service_manager find
+deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } keystore keystore_key *
 deny init * file relabelto
 enforce untrusted_app
 enforce isolated_app
 enforce app_zygote
 enforce untrusted_app_29
+enforce untrusted_app_27
