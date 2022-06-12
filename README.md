@@ -20,4 +20,4 @@ Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 
 ## Blogs
 
-- [**Detect Magisk and Xposed**](./detect_magisk_xposed) by canyie, vvb2060
+- [**Detect Magisk and Xposed**](./blog/detect_magisk_xposed) by canyie, vvb2060
