@@ -13,10 +13,11 @@ Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 
 ## Funny stuffs
 
-- [**Magisk Modules Manager**](https://github.com/Fox2Code/FoxMagiskModuleManager)
-- [**VphoneGaga Mod Free with Magisk**](./vphonegaga/magisk) - Intergrate Magisk root into VphoneGaga virtual machine for Android.
-- [**Magisk on Emulator for PC**](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
-- [**initrd-magisk**](http://github.com/huskydg/initrd-magisk) - Integrate Magisk into Android-x86 project such as BlissOS, PrimeOS,... (Android 9+)
+- [Magisk Modules Manager](https://github.com/Fox2Code/FoxMagiskModuleManager)
+- [VphoneGaga Mod Free with Magisk](./vphonegaga/magisk) - Intergrate Magisk root into VphoneGaga virtual machine for Android.
+- [Magisk on Emulator for PC](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
+- [initrd-magisk](http://github.com/huskydg/initrd-magisk) - Integrate Magisk into Android-x86 project such as BlissOS, PrimeOS,... (Android 9+)
+- [Magisk Delta](http://huskydg.github.io/magisk-files) - Custom Magisk by HuskyDG
 
 ## Blogs
 
