@@ -2,23 +2,19 @@
 
 Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 
+## Project
+
+- [Magisk Modules Manager](https://github.com/Fox2Code/FoxMagiskModuleManager) - A module manager for Magisk because the official app dropped support for it
+- [Magisk Delta](http://huskydg.github.io/magisk-files) - Yet another custom Magisk fork by HuskyDG restored MagiskHide because Magisk officially removed it.
+- [initrd-magisk](http://huskydg.github.io/initrd-magisk) - Integrate Magisk into Android x86 project
+
 
 ## Magisk modules
 
-- [**RAM Swapper**](https://github.com/HuskyDG/Magisk_RAM_Swapper) - Expand RAM memory by converting a part of storage to swap RAM.
-- [**Bootloop Saver**](https://github.com/HuskyDG/Magisk_BootloopSaver) - Protect your system from bootloop caused by Magisk modules.
-- [**OverlayFS**](https://github.com/magisk-modules-alt-repo/magisk_OverlayFS) - Emulate read-write partition for read-only system partitions.
-- [**Magic FlashTool**](https://github.com/magisk-modules-alt-repo/magic-flash) - An android CLI flash tool without custom recoveries.
-- [**Hidden Permissive**](https://huskydg.github.io/hidden_permissive) - Turn Selinux mode into Permissive and keep it hidden from other apps.
+- [RAM Swapper](https://github.com/HuskyDG/Magisk_RAM_Swapper) - Expand RAM memory by converting a part of storage to swap RAM.
+- [Bootloop Saver](https://github.com/HuskyDG/Magisk_BootloopSaver) - Protect your system from bootloop caused by Magisk modules.
+- [OverlayFS](https://github.com/magisk-modules-alt-repo/magisk_OverlayFS) - Emulate read-write partition for read-only system partitions.
+- [Magic FlashTool](https://github.com/magisk-modules-alt-repo/magic-flash) - An android CLI flash tool without custom recoveries.
+- [Hidden Permissive](https://huskydg.github.io/hidden_permissive) - Turn Selinux mode into Permissive and keep it hidden from other apps.
 
-## Funny stuffs
 
-- [Magisk Modules Manager](https://github.com/Fox2Code/FoxMagiskModuleManager)
-- [VphoneGaga Mod Free with Magisk](./vphonegaga/magisk) - Intergrate Magisk root into VphoneGaga virtual machine for Android.
-- [Magisk on Emulator for PC](http://github.com/huskydg/magiskonemu) - Integrate Magisk root into Android Emulator (NoxPlayer, Bluestacks, LDPlayer, MEMu and Android x86 project BlissOS)
-- [initrd-magisk](http://github.com/huskydg/initrd-magisk) - Integrate Magisk into Android-x86 project such as BlissOS, PrimeOS,... (Android 9+)
-- [Magisk Delta](http://huskydg.github.io/magisk-files) - Custom Magisk by HuskyDG
-
-## Blogs
-
-- [**Detect Magisk and Xposed**](./blog/detect_magisk_xposed) by canyie, vvb2060
