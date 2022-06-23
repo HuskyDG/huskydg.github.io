@@ -9,8 +9,8 @@ Not long ago, developers Rikka & vvb2060 launched an environmental detection app
 
 ## Detect Magisk (Documentation by vvb2060)
 
-### Magic Hide
-The core of Magisk Hide is the mount namespace. After magiskd waits for the mount namespace of the zygote child process to be separated from the parent process, it unloads all Magisk mounts to the child process. Due to the nature of mount namespaces, the unmount operation will affect the child process of this child process, but not zygote. zygote is the parent process of all application processes, if zygote is handled by Magisk Hide, all applications will lose root. MountModeThere is a parameter when zygote starts a new process , when it is `Zygote.MOUNT_EXTERNAL_NONE`, the new process does not mount the storage space, and there is no mount namespace separation step.
+### MagiskHide
+The core of Magisk Hide is the mount namespace. After magiskd waits for the mount namespace of the zygote child process to be separated from the parent process, it unmounts all Magisk mounts to the child process. Due to the nature of mount namespaces, the unmount operation will affect the child process of this child process, but not zygote. zygote is the parent process of all application processes, if zygote is handled by Magisk Hide, all applications will lose root. There is a parameter when zygote starts a new process , when it is `Zygote.MOUNT_EXTERNAL_NONE`, the new process does not mount the storage space, and there is no mount namespace separation step.
 
 There are two cases, one is that the read storage space op of the application appops is ignored, and the other is that the process is an isolated process. The former application itself cannot be operated, and the latter has been supported since Android 4.1. In addition, an interesting feature of the isolated process is the random UID, which is different every time it runs. This interesting feature causes Magisk Hide to skip the process and not handle it before detecting the mount namespace.
 
@@ -170,7 +170,7 @@ One is that the read storage space op of the application appops is ignored, and 
 
 The isolated process here refers to `android:isolatedProcess="true"` the service. Moreover, there is also a (private) interesting (goods) thing on Android 10 called App Zygote. There is almost no description for this thing. The only document is ZygotePreload , which feels more like a backdoor opened by Google to Chrome. Ahem, off topic, this thing runs in a separate process and doesn't separate namespaces.
 
-There are currently two known solutions to this problem. The first is Magisk Lite , which directly uninstalls zygote instead of applying it, but this method will destroy many existing modules; the other is to use process injection to forcibly separate namespaces , the typical solution is Riru-Unshare .
+There are currently two known solutions to this problem. The first is Magisk Lite , which directly unmount zygote process instead of applying it, but this method will destroy many existing modules; the other is to use code injection to forcibly separate namespaces , the typical solution is **Riru-Unshare**.
 
 Ok, this question is over, the next one~~
 
