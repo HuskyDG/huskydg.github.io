@@ -227,7 +227,7 @@ LOGD( "Inject magisk services: [%s] [%s] [%s]\n" , pfd_svc, ls_svc, bc_svc);
 fprintf (rc, MAGISK_RC, tmp_dir, pfd_svc, ls_svc, bc_svc);
 ```
 
-Magisk will inject three of its own services into `init.rc` at startup to receive events such as post-fs-data; the names of these three services are randomized, and init will actually go to the system properties Add init.svc.<service name>a property like this, with a value of running or stopped, to tell other processes the status of the service. MagiskDetector takes advantage of this mechanism, traverses the system properties to record all service names, and then knows whether any service names have changed after the user restarts.
+Magisk will inject three of its own services into `init.rc` at startup to receive events such as post-fs-data; the names of these three services are randomized, and init will actually go to the system properties. Add `init.svc.<service name>` property like this, with a value of running or stopped, to tell other processes the status of the service. MagiskDetector takes advantage of this mechanism, traverses the system properties to record all service names, and then knows whether any service names have changed after the user restarts.
 
 ## Detect SELinux rules
 [magiskpolicy/rules.cpp](https://github.com/topjohnwu/Magisk/blob/master/native/jni/magiskpolicy/rules.cpp)
@@ -258,15 +258,15 @@ type(SEPOL_FILE_TYPE, "file_type" );
 
 ```
 
-Two magisk own domains have been added, which seems to be no problem. However, if the user sets selinux to permissive mode, the app can proceed selinux_check_access()(the interface corresponding to the java layer is SELinux.checkSELinuxAccess()), and if it is allowed, it means that this domain exists. => Magisk installed.
+Two magisk own domains have been added, which seems to be no problem. However, if the user sets selinux to permissive mode, the app can proceed `selinux_check_access()` (the interface corresponding to the java layer is `SELinux.checkSELinuxAccess()`), and if it is allowed, it means that this domain exists. => Magisk installed.
 
-Not only the permissive mode, if you add allow appdomain xxx relabelfromsuch rules and don't have them deny appdomain magisk_file relabelto, the app may chcon the context of a file magisk_file, and then by trying to manipulate the file to determine whether it is rejected, you can test whether there is this domain in the system. .
+Not only the permissive mode, if you add `allow appdomain xxx relabelfrom` such rules and don't have them `deny appdomain magisk_file relabelto`, the app may chcon the context of a file magisk_file, and then by trying to manipulate the file to determine whether it is rejected, you can test whether there is this domain in the system. .
 
 SELinux is an important part of Android's security mechanism, and it is strongly discouraged to set it to permissive mode or ignore neverallow to add rules at will.
 
 ### Off topic: Detecting magiskd
 Although MagiskDetector does not use this method, it is a bit interesting, so I can talk about it.
-Before Android 7, /procthere was no limit, and anyone could traverse to get the process list; in 7, it was added hidepid=2, but not all manufacturers kept up; for these devices, just scan to see if there is magiskda process called Make sure there is no magisk.
+Before Android 7, `/proc` was no limit, and anyone could traverse to get the process list; in 7, it was added hidepid=2, but not all manufacturers kept up; for these devices, just scan to see if there is magiskda process called Make sure there is no magisk.
 
 ## Xposed
 ### Detect Xposed
