@@ -16,7 +16,6 @@ deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 }
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } rootfs file { read write }
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } * property_service { set }
 deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } display_service service_manager find
-deny { untrusted_app isolated_app untrusted_app_29 app_zygote untrusted_app_27 } keystore keystore_key *
 deny init * file relabelto
 enforce untrusted_app
 enforce isolated_app
