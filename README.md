@@ -7,7 +7,7 @@ Telegram Channel: [@HuskyDG](http://t.me/HuskyDG)
 - [Magisk Modules Manager](https://github.com/Fox2Code/FoxMagiskModuleManager) - A module manager for Magisk because the official app dropped support for it
 - [Magisk Delta](http://huskydg.github.io/magisk-files) - Yet another custom Magisk fork by HuskyDG restored MagiskHide because Magisk officially removed it.
 - [initrd-magisk](http://huskydg.github.io/initrd-magisk) - Integrate Magisk into Android x86 project
-
+- [injectprop](http://huskydg.github.io/injectprop) - Inject Android system properties tool
 
 ## Magisk modules
 
