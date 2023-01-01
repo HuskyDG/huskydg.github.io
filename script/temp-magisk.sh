@@ -44,10 +44,6 @@ for file in lib*.so; do
   mv "$file" "${file:3:${#file}-6}"
 done
 
-if ! magisk -c | grep -q "delta" &>/dev/null; then
-  exit 1
-fi
-
 # Stop zygote (and previous setup if exists)
 magisk --stop 2>/dev/null
 stop
